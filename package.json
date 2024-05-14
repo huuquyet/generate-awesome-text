@@ -1,0 +1,35 @@
+{
+  "name": "generate-awesome-text",
+  "description": "Generate awesome text",
+  "version": "0.1.0",
+  "repository": "git@github.com:huuquyet/generate-awesome-text",
+  "author": "huuquyet <huuquyetng@gmail.com>",
+  "private": true,
+  "license": "MIT",
+  "main": "src/index.ts",
+  "exports": {
+    ".": "./dist/index.js"
+  },
+  "engines": {
+    "node": ">=20"
+  },
+  "scripts": {
+    "bundle": "yarn lint && yarn package",
+    "clean": "git clean -xdf",
+    "doctor": "yarn dlx @yarnpkg/doctor",
+    "lint": "yarn dlx @biomejs/biome check --apply .",
+    "package": "yarn ncc build src/index.ts -o dist --source-map --license licenses.txt",
+    "package:watch": "yarn package -- --watch",
+    "update": "yarn upgrade-interactive",
+    "vscode": "yarn dlx @yarnpkg/sdks vscode"
+  },
+  "dependencies": {
+    "@actions/core": "^1.10.1"
+  },
+  "devDependencies": {
+    "@types/node": "^20.12.11",
+    "@vercel/ncc": "^0.38.1",
+    "typescript": "^5.4.5"
+  },
+  "packageManager": "yarn@4.2.2"
+}
