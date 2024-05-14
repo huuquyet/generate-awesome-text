@@ -6,7 +6,7 @@ const API_TOKEN = env.HF_API_TOKEN
 
 /** Fetch text-to-image models with inference api */
 async function query(data: any) {
-  const API_URL = `https://api-inference.huggingface.co/models/HuggingFaceH4/starchat2-15b-v0.1`
+  const API_URL = 'https://api-inference.huggingface.co/models/HuggingFaceH4/starchat2-15b-v0.1'
 
   const response = await fetch(API_URL, {
     headers: { Authorization: `Bearer ${API_TOKEN}` },
@@ -23,14 +23,15 @@ async function query(data: any) {
 
 /** Get random prompt and query the inference api, then save the image */
 export async function run(): Promise<void> {
+  const data = {
+    inputs: 'Please tell a dad joke, just the content of the joke',
+    options: {
+      wait_for_model: true,
+    },
+  }
   try {
-    query({
-      inputs: "Please tell a dad joke, just the content of the joke",
-      options: {
-        wait_for_model: true
-      }
-    }).then(async (response) => {
-      console.log(response)
+    query(data).then(async (response) => {
+      console.log(JSON.stringify(response))
     })
   } catch (error) {
     // Fail the workflow run if an error occurs
