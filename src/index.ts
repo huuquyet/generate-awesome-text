@@ -1,6 +1,6 @@
 /**
  * The entrypoint for the action.
  */
-import { run } from './generate'
+import { run } from './chatgpt'
 
 run()
