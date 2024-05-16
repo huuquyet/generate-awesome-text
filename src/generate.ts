@@ -4,9 +4,9 @@ import * as core from '@actions/core'
 // Envinroment secrets get from https://huggingface.co/settings/tokens
 const API_TOKEN = env.HF_API_TOKEN
 
-/** Fetch dialoGPT model with inference api */
+/** Fetch google gemma model with inference api */
 async function query(data: any) {
-  const API_URL = 'https://api-inference.huggingface.co/models/microsoft/DialoGPT-large'
+  const API_URL = 'https://api-inference.huggingface.co/models/google/gemma-7b'
 
   const response = await fetch(API_URL, {
     headers: { Authorization: `Bearer ${API_TOKEN}` },
@@ -24,11 +24,7 @@ async function query(data: any) {
 /** Get random prompt and query the inference api, then save the image */
 export async function run(): Promise<void> {
   const data = {
-    inputs: {
-      past_user_inputs: ['Hello, how are you?'],
-      generated_responses: ["I'm doing great. How can I help you today?"],
-      text: 'Please tell a dad joke about developer',
-    },
+    inputs: 'Please tell a dad joke about developer',
     options: {
       wait_for_model: true,
     },
