@@ -24950,9 +24950,9 @@ const node_process_1 = __nccwpck_require__(7742);
 const core = __importStar(__nccwpck_require__(4016));
 // Envinroment secrets get from https://huggingface.co/settings/tokens
 const API_TOKEN = node_process_1.env.HF_API_TOKEN;
-/** Fetch google gemma model with inference api */
+/** Fetch dialoGPT model with inference api */
 async function query(data) {
-    const API_URL = 'https://api-inference.huggingface.co/models/google/gemma-7b';
+    const API_URL = 'https://api-inference.huggingface.co/models/r3dhummingbird/DialoGPT-medium-joshua';
     const response = await fetch(API_URL, {
         headers: { Authorization: `Bearer ${API_TOKEN}` },
         method: 'POST',
@@ -24967,7 +24967,11 @@ async function query(data) {
 /** Get random prompt and query the inference api, then save the image */
 async function run() {
     const data = {
-        inputs: 'Please tell a dad joke about developer',
+        inputs: {
+            past_user_inputs: ['Hello, how are you?'],
+            generated_responses: ["I'm doing great. How can I help you today?"],
+            text: 'Please tell a dad joke about developer',
+        },
         options: {
             wait_for_model: true,
         },
