@@ -26270,10 +26270,10 @@ Object.defineProperty(exports, "__esModule", ({ value: true }));
 exports.updateReadme = void 0;
 const promises_1 = __nccwpck_require__(3977);
 const node_path_1 = __nccwpck_require__(9411);
-// The patterns to set the caption of image
+// The patterns to set the dad joke
 const START_JOKE = '<!-- START_JOKE -->';
 const END_JOKE = '<!-- END_JOKE -->';
-/** Update ReadMe file caption of image with model_id and prompt */
+/** Update ReadMe file with the dad joke */
 async function updateReadme(joke) {
     try {
         const filePath = (0, node_path_1.resolve)('./README.md');
@@ -26281,7 +26281,7 @@ async function updateReadme(joke) {
         const firstRemains = contents.substring(0, contents.indexOf(START_JOKE)).concat(START_JOKE);
         const lastRemains = contents.substring(contents.indexOf(END_JOKE));
         const rawJoke = String.raw `${joke}`;
-        const result = `${firstRemains}\n\n  ${rawJoke}\n${lastRemains}`;
+        const result = `${firstRemains}\n${rawJoke}\n${lastRemains}`;
         await (0, promises_1.writeFile)(filePath, result);
     }
     catch (error) {
