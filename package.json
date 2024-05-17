@@ -1,10 +1,13 @@
 {
   "name": "generate-awesome-text",
-  "description": "Generate awesome text",
-  "version": "0.1.0",
+  "description": "Generate awesome text with Google's Gemini model",
+  "version": "1.0.0",
   "repository": "git@github.com:huuquyet/generate-awesome-text",
   "author": "huuquyet <huuquyetng@gmail.com>",
-  "private": true,
+  "bugs": {
+    "url": "https://github.com/huuquyet/generate-awesome-text/issues"
+  },
+  "homepage": "https://github.com/marketplace/actions/generate-awesome-text",
   "license": "MIT",
   "main": "src/index.ts",
   "exports": {
@@ -32,5 +35,14 @@
     "@vercel/ncc": "^0.38.1",
     "typescript": "^5.4.5"
   },
-  "packageManager": "yarn@4.2.2"
+  "packageManager": "yarn@4.2.2",
+  "keywords": [
+    "github-actions",
+    "typescript",
+    "workflows",
+    "Gemini",
+    "google",
+    "text-generation",
+    "joke"
+  ]
 }
