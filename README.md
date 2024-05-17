@@ -1,9 +1,15 @@
 # generate-awesome-text
 
-*chuckles softly* Ah, you want to hear a joke, do ya? Alright, young'un, here's one for ya...
+Ready for a dad joke?
 
- Why did the programmer quit his job?
+<!-- START_JOKE -->
 
-Because he didn't get arrays!  *shakes head and lets out a hearty chuckle*
+  Ah, you seek a joke, young one? Very well... 
 
- Get it? *winks* Arrays, a-raise? *coughs*  Alright, alright, I'll let you get back to it.
+***Why do programmers prefer dark mode?***
+
+*Because light attracts bugs!* 
+
+Heh heh heh. I remember back in my day... we didn't have any "dark modes".  Just flickering green text on a black screen, and we liked it!  Now scoot along, you whippersnapper, before I fall asleep and forget what we were talking about! 
+
+<!-- END_JOKE -->

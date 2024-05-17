@@ -1,6 +1,7 @@
 import { env } from 'node:process'
 import * as core from '@actions/core'
 import { GoogleGenerativeAI, HarmBlockThreshold, HarmCategory } from '@google/generative-ai'
+import { updateReadme } from './updateReadme'
 
 // You can get your API key at https://aistudio.google.com/app/apikey
 const API_KEY = env.GEMINI_API_TOKEN as string
@@ -29,9 +30,11 @@ export async function run() {
   try {
     const result = await model.generateContent(prompt)
     const response = await result.response
-    const text = response.text()
-    console.log(text)
+    const joke = response.text()
+    updateReadme(joke)
+    core.setOutput('prompt', joke)
   } catch (error) {
+    console.error(error)
     // Fail the workflow run if an error occurs
     if (error instanceof Error) core.setFailed(error.message)
   }

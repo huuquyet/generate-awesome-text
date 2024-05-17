@@ -26223,6 +26223,7 @@ exports.run = void 0;
 const node_process_1 = __nccwpck_require__(7742);
 const core = __importStar(__nccwpck_require__(4016));
 const generative_ai_1 = __nccwpck_require__(3263);
+const updateReadme_1 = __nccwpck_require__(1855);
 // You can get your API key at https://aistudio.google.com/app/apikey
 const API_KEY = node_process_1.env.GEMINI_API_TOKEN;
 const genAI = new generative_ai_1.GoogleGenerativeAI(API_KEY);
@@ -26244,16 +26245,50 @@ async function run() {
     try {
         const result = await model.generateContent(prompt);
         const response = await result.response;
-        const text = response.text();
-        console.log(text);
+        const joke = response.text();
+        (0, updateReadme_1.updateReadme)(joke);
+        core.setOutput('prompt', joke);
     }
     catch (error) {
+        console.error(error);
         // Fail the workflow run if an error occurs
         if (error instanceof Error)
             core.setFailed(error.message);
     }
 }
 exports.run = run;
+
+
+/***/ }),
+
+/***/ 1855:
+/***/ ((__unused_webpack_module, exports, __nccwpck_require__) => {
+
+"use strict";
+
+Object.defineProperty(exports, "__esModule", ({ value: true }));
+exports.updateReadme = void 0;
+const promises_1 = __nccwpck_require__(3977);
+const node_path_1 = __nccwpck_require__(9411);
+// The patterns to set the caption of image
+const START_JOKE = '<!-- START_JOKE -->';
+const END_JOKE = '<!-- END_JOKE -->';
+/** Update ReadMe file caption of image with model_id and prompt */
+async function updateReadme(joke) {
+    try {
+        const filePath = (0, node_path_1.resolve)('./README.md');
+        const contents = await (0, promises_1.readFile)(filePath, { encoding: 'utf8' });
+        const firstRemains = contents.substring(0, contents.indexOf(START_JOKE)).concat(START_JOKE);
+        const lastRemains = contents.substring(contents.indexOf(END_JOKE));
+        const rawJoke = String.raw `${joke}`;
+        const result = `${firstRemains}\n\n  ${rawJoke}\n${lastRemains}`;
+        await (0, promises_1.writeFile)(filePath, result);
+    }
+    catch (error) {
+        throw new Error(error.message);
+    }
+}
+exports.updateReadme = updateReadme;
 
 
 /***/ }),
@@ -26359,6 +26394,22 @@ module.exports = require("net");
 
 "use strict";
 module.exports = require("node:events");
+
+/***/ }),
+
+/***/ 3977:
+/***/ ((module) => {
+
+"use strict";
+module.exports = require("node:fs/promises");
+
+/***/ }),
+
+/***/ 9411:
+/***/ ((module) => {
+
+"use strict";
+module.exports = require("node:path");
 
 /***/ }),
 
