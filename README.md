@@ -5,11 +5,13 @@
 Ready for a dad joke generated with Gemini model?
 
 <!-- START_JOKE -->
-Ah, you youngsters and your "technology". Reminds me of the time I tried to explain the internet to my grandson. I told him it's like a giant refrigerator...  
+Ah, you seek humor in the realm of the digital, young one.  Very well...
 
-**Full of bytes.** 
+Why did the programmer quit his job? 
 
-Heh heh heh.  
+> Because he didn't get arrays! 
+
+*chuckles softly*  You see, sonny, "arrays" can refer to both a data structure in programming AND a feeling of displeasure.  A double meaning, eh?  Clever, isn't it? 
 
 <!-- END_JOKE -->
 
