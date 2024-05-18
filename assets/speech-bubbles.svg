@@ -4,101 +4,139 @@
         <div xmlns="http://www.w3.org/1999/xhtml">
             <style>
                 .container {
-                    --rad: 20px;
-                    --rad-sm: 3px;
                     margin: 0 auto;
                     max-width: 600px;
-                    padding: 20px;
+                    width: 100%;
+                    padding: 1rem;
                     display: flex;
-                    flex-direction: column;
-                    font-size: 16px;
-                    line-height: 1.75;
+                    justify-content: center;
+                    align-items: center;
                     font-family: Inter, Roboto, Helvetica, "Segoe UI", Montserrat, Arial, sans-serif;
                 }
 
-                .message {
+                .imessage {
+                    background-color: #fff;
+                    border: 1px solid #e5e5ea;
+                    border-radius: 0.25rem;
+                    display: flex;
+                    flex-direction: column;
+                    font-size: 1.25rem;
+                    margin: 0 auto 1rem;
+                    max-width: 600px;
+                    padding: 0.5rem 1.5rem;
+                }
+
+                .imessage p {
+                    border-radius: 1.15rem;
+                    line-height: 1.25;
                     max-width: 75%;
-                    padding: 7px 15px;
+                    padding: 0.5rem .875rem;
                     position: relative;
-                    margin-bottom: 2px;
+                    word-wrap: break-word;
                 }
 
-                .message.sent {
-                    border-radius: var(--rad) var(--rad-sm) var(--rad-sm) var(--rad);
-                    background: #42a5f5;
-                    color: #fff;
-                    margin-left: auto;
-                }
-
-                .message.received {
-                    border-radius: var(--rad-sm) var(--rad) var(--rad) var(--rad-sm);
-                    background: #f1f1f1;
-                    color: #555;
-                    margin-right: auto;
-                }
-
-                .message.sent:first-child,
-                .message.received+.message.sent {
-                    border-top-right-radius: var(--rad);
-                }
-
-                .message.received:first-child,
-                .message.sent+.message.received {
-                    border-top-left-radius: var(--rad);
-                }
-
-                .message::before {
-                    content: attr(data-time);
-                    font-size: 0.8rem;
+                .imessage p::before,
+                .imessage p::after {
+                    bottom: -0.1rem;
+                    content: "";
+                    height: 1rem;
                     position: absolute;
-                    bottom: 100%;
-                    color: #888;
-                    white-space: nowrap;
+                }
+
+                p.from-me {
+                    align-self: flex-end;
+                    background-color: #248bf5;
+                    color: #fff;
+                }
+
+                p.from-me::before {
+                    border-bottom-left-radius: 0.8rem 0.7rem;
+                    border-right: 1rem solid #248bf5;
+                    right: -0.35rem;
+                    transform: translate(0, -0.1rem);
+                }
+
+                p.from-me::after {
+                    background-color: #fff;
+                    border-bottom-left-radius: 0.5rem;
+                    right: -40px;
+                    transform: translate(-30px, -2px);
+                    width: 10px;
+                }
+
+                p[class^="from-"] {
+                    margin: 0.5rem 0;
+                    width: fit-content;
+                }
+
+                p.from-me~p.from-me {
+                    margin: 0.25rem 0 0;
+                }
+
+                p.from-me~p.from-me:not(:last-child) {
+                    margin: 0.25rem 0 0;
+                }
+
+                p.from-me~p.from-me:last-child {
+                    margin-bottom: 0.5rem;
+                }
+
+                p.from-them {
+                    align-items: flex-start;
+                    background-color: #e5e5ea;
+                    color: #000;
+                }
+
+                p.from-them:before {
+                    border-bottom-right-radius: 0.8rem 0.7rem;
+                    border-left: 1rem solid #e5e5ea;
+                    left: -0.35rem;
+                    transform: translate(0, -0.1rem);
+                }
+
+                p.from-them::after {
+                    background-color: #fff;
+                    border-bottom-right-radius: 0.5rem;
+                    left: 20px;
+                    transform: translate(-30px, -2px);
+                    width: 10px;
+                }
+
+                .no-tail::before {
                     display: none;
                 }
 
-                .message.sent::before {
-                    right: 15px;
+                .margin-b_none {
+                    margin-bottom: 0 !important;
                 }
 
-                .message.received::before {
-                    left: 15px;
+                .margin-b_one {
+                    margin-bottom: 1rem !important;
                 }
 
-                .message:first-child::before,
-                .message.sent+.message.received::before,
-                .message.received+.message.sent::before {
-                    display: block;
+                .margin-t_one {
+                    margin-top: 1rem !important;
                 }
             </style>
             <div class="container">
-                <div class="message">
-                    <div class="sent">Please tell a funny joke</div>
+                <div class="imessage">
+                    <p class="from-me margin-b_one margin-t_one">Please tell a funny joke</p>
 
                     <!-- START_JOKE -->
-Well, you know, sonny, 😄  a good chuckle is always good for the soul.  👴 Let me see... Ah, I got one!
-
-Why don't scientists trust atoms? 
-
-Because they make up everything! 😜 
-
-<br> 
-
-Now, let me lay that out nice and clear for ya, like a freshly paved sidewalk: 
-
-<div class="joke-setup">
-Why don't scientists trust atoms? 
-</div> 
-<div class="punchline">
-Because they make up everything! 😜 
-</div> 
-
-There ya go!  Hope that tickled your funny bone! 😉 
+<p class="from-them margin-b_none no-tail">
+  Why don't scientists trust atoms? 
+</p>
+<p class="from-them no-tail">
+  Because they make up everything! 😂
+</p>
+<p class="from-them">
+  Hee hee hee! I crack myself up! 😉 
+</p> 
 
 <!-- END_JOKE -->
+
                 </div>
             </div>
-        </div>
         </div>
     </foreignObject>
 </svg>

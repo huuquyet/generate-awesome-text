@@ -5,30 +5,20 @@
 Ready for a dad joke generated with Gemini model?
 
 <!-- START_JOKE -->
-Well, you know, sonny, 😄  a good chuckle is always good for the soul.  👴 Let me see... Ah, I got one!
-
-Why don't scientists trust atoms? 
-
-Because they make up everything! 😜 
-
-<br> 
-
-Now, let me lay that out nice and clear for ya, like a freshly paved sidewalk: 
-
-<div class="joke-setup">
-Why don't scientists trust atoms? 
-</div> 
-<div class="punchline">
-Because they make up everything! 😜 
-</div> 
-
-There ya go!  Hope that tickled your funny bone! 😉 
+<p class="from-them margin-b_none no-tail">
+  Why don't scientists trust atoms? 
+</p>
+<p class="from-them no-tail">
+  Because they make up everything! 😂
+</p>
+<p class="from-them">
+  Hee hee hee! I crack myself up! 😉 
+</p> 
 
 <!-- END_JOKE -->
 
-<div align="center">
-
-![Speech bubbles](./assets/speech-bubbles.svg)
+<div align="center" width="100%">
+  <img alt="Speech bubbles" src="./assets/speech-bubbles.svg" width="100%">
 </div>
 
 ## API TOKEN
