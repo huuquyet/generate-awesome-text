@@ -15,6 +15,11 @@ Why did the programmer quit his job?
 
 <!-- END_JOKE -->
 
+<div align="center">
+
+![Speech bubbles](./assets/speech-bubbles.svg)
+</div>
+
 ## API TOKEN
 
 ### GEMINI_API_TOKEN
