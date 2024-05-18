@@ -1,22 +1,22 @@
-name: 'Generate awesome text'
-description: 'Generate awesome text with Google Gemini model'
+name: "Generate awesome text"
+description: "Generate awesome text with Google Gemini model"
 author: huuquyet
 
 # Add your action's branding here. This will appear on the GitHub Marketplace. Icons from https://feathericons.com/
 branding:
-  icon: 'file-text'
-  color: 'yellow'
+  icon: "file-text"
+  color: "yellow"
 
 # Enter the input in order to customize
 inputs:
-  input:  # id of input
-    description: 'Input param send to the action'
+  input: # id of input
+    description: "Input param send to the action"
 
 # Ouput generated prompt to use later
 outputs:
   prompt:
-    description: 'The generated prompt by Gemini model for later using'
+    description: "The generated prompt by Gemini model for later using"
 
 runs:
-  using: 'node20'
+  using: "node20"
   main: dist/index.js

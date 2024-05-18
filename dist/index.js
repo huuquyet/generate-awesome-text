@@ -26223,7 +26223,7 @@ exports.run = void 0;
 const node_process_1 = __nccwpck_require__(7742);
 const core = __importStar(__nccwpck_require__(4016));
 const generative_ai_1 = __nccwpck_require__(3263);
-const updateReadme_1 = __nccwpck_require__(1855);
+const updateFiles_1 = __nccwpck_require__(7538);
 // You can get your API key at https://aistudio.google.com/app/apikey
 const API_KEY = node_process_1.env.GEMINI_API_TOKEN;
 const genAI = new generative_ai_1.GoogleGenerativeAI(API_KEY);
@@ -26236,17 +26236,17 @@ const safetySettings = [
 // For text-only input, use gemini-pro model
 const model = genAI.getGenerativeModel({
     model: 'gemini-1.5-pro-latest',
-    systemInstruction: 'You are a friendly chatbot who always responds in the style of a wise oldman, output in markdown format',
+    systemInstruction: 'You are a front-end expert who always responds in the style of a friendly and wise oldman. Please return the HTML code with format: each lines is paragraph without div has class from-them, also add class no-tail except last line, the first add class margin-b_none. Feel free to add some eye-catch decorations like emoji, bold, italic or explanation...',
     safetySettings,
 });
 /** Call gemini-pro model to generate text from prompt */
 async function run() {
-    const prompt = 'Please tell a dad joke about programming, technology, science or computer';
+    const prompt = 'Please tell a funny joke to make everybody laugh';
     try {
         const result = await model.generateContent(prompt);
         const response = await result.response;
         const joke = response.text();
-        (0, updateReadme_1.updateReadme)(joke);
+        (0, updateFiles_1.updateFiles)(joke);
         core.setOutput('prompt', joke);
     }
     catch (error) {
@@ -26261,22 +26261,28 @@ exports.run = run;
 
 /***/ }),
 
-/***/ 1855:
+/***/ 7538:
 /***/ ((__unused_webpack_module, exports, __nccwpck_require__) => {
 
 "use strict";
 
 Object.defineProperty(exports, "__esModule", ({ value: true }));
-exports.updateReadme = void 0;
+exports.updateFiles = void 0;
 const promises_1 = __nccwpck_require__(3977);
 const node_path_1 = __nccwpck_require__(9411);
 // The patterns to set the dad joke
 const START_JOKE = '<!-- START_JOKE -->';
 const END_JOKE = '<!-- END_JOKE -->';
-/** Update ReadMe file with the dad joke */
-async function updateReadme(joke) {
+/** Update Readme and svg files with joke */
+async function updateFiles(joke) {
+    update('./README.md', joke);
+    update('./assets/speech-bubbles.svg', joke);
+}
+exports.updateFiles = updateFiles;
+/** Update file with the dad joke */
+async function update(fileName, joke) {
     try {
-        const filePath = (0, node_path_1.resolve)('./README.md');
+        const filePath = (0, node_path_1.resolve)(fileName);
         const contents = await (0, promises_1.readFile)(filePath, { encoding: 'utf8' });
         const firstRemains = contents.substring(0, contents.indexOf(START_JOKE)).concat(START_JOKE);
         const lastRemains = contents.substring(contents.indexOf(END_JOKE));
@@ -26288,7 +26294,6 @@ async function updateReadme(joke) {
         throw new Error(error.message);
     }
 }
-exports.updateReadme = updateReadme;
 
 
 /***/ }),
