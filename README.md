@@ -5,13 +5,15 @@
 Ready for a dad joke generated with Gemini model?
 
 <!-- START_JOKE -->
-Ah, you seek humor in the realm of the digital, young one.  Very well...
-
-Why did the programmer quit his job? 
-
-> Because he didn't get arrays! 
-
-*chuckles softly*  You see, sonny, "arrays" can refer to both a data structure in programming AND a feeling of displeasure.  A double meaning, eh?  Clever, isn't it? 
+<p class="from-them margin-b_none no-tail">
+ Why don't scientists trust atoms? 🧪 
+</p>
+<p class="from-them no-tail">
+Because they make up everything! 😂
+</p>
+<p class="from-them">
+ Hehehe, get it? 😉 Hope that tickled your funny bone! 
+</p> 
 
 <!-- END_JOKE -->
 
@@ -50,7 +52,7 @@ See [this](.github/workflows/generate-awesome-text.yml) for example usage
 
 ### Update your README
 
-Add a comment block to your `README.md` file to update joke automatically
+Add a comment block to your `README.md` and `assets/speech-bubbles.svg` files to update joke automatically
 
 ```md
 <!-- START_JOKE -->

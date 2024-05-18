@@ -1,7 +1,7 @@
 {
   "name": "generate-awesome-text",
   "description": "Generate awesome text with Google's Gemini model",
-  "version": "1.0.0",
+  "version": "1.1.0",
   "repository": "git@github.com:huuquyet/generate-awesome-text",
   "author": "huuquyet <huuquyetng@gmail.com>",
   "bugs": {

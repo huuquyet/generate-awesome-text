@@ -5,10 +5,16 @@ import { resolve } from 'node:path'
 const START_JOKE = '<!-- START_JOKE -->'
 const END_JOKE = '<!-- END_JOKE -->'
 
-/** Update ReadMe file with the dad joke */
-export async function updateReadme(joke: string) {
+/** Update Readme and svg files with funny joke */
+export async function updateFiles(joke: string) {
+  update('./README.md', joke)
+  update('./assets/speech-bubbles.svg', joke)
+}
+
+/** Update file with the funny joke */
+async function update(fileName: string, joke: string) {
   try {
-    const filePath = resolve('./README.md')
+    const filePath = resolve(fileName)
     const contents = await readFile(filePath, { encoding: 'utf8' })
     const firstRemains = contents.substring(0, contents.indexOf(START_JOKE)).concat(START_JOKE)
     const lastRemains = contents.substring(contents.indexOf(END_JOKE))
