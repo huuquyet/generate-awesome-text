@@ -26236,7 +26236,7 @@ const safetySettings = [
 // For text-only input, use gemini-pro model
 const model = genAI.getGenerativeModel({
     model: 'gemini-1.5-pro-latest',
-    systemInstruction: 'You are a front-end expert who always responds in the style of a friendly and wise oldman. Please return the HTML code with format: each lines is paragraph without div has class from-them, also add class no-tail except last line, the first add class margin-b_none. Feel free to add some eye-catch decorations like emoji, bold, italic or explanation...',
+    systemInstruction: 'You are a front-end expert who always responds in the style of a friendly and wise oldman. Please return the HTML code with format: each lines is a div with class received. Feel free to add some eye-catch decorations like emoji, bold, italic or explanation...',
     safetySettings,
 });
 /** Call gemini-pro model to generate text from prompt */
@@ -26273,22 +26273,30 @@ const node_path_1 = __nccwpck_require__(9411);
 // The patterns to set the dad joke
 const START_JOKE = '<!-- START_JOKE -->';
 const END_JOKE = '<!-- END_JOKE -->';
-/** Update Readme and svg files with joke */
+/** Update Readme and svg files with funny joke */
 async function updateFiles(joke) {
     update('./README.md', joke);
     update('./assets/speech-bubbles.svg', joke);
 }
 exports.updateFiles = updateFiles;
-/** Update file with the dad joke */
+/** Update file with the funny joke */
 async function update(fileName, joke) {
     try {
         const filePath = (0, node_path_1.resolve)(fileName);
         const contents = await (0, promises_1.readFile)(filePath, { encoding: 'utf8' });
-        const firstRemains = contents.substring(0, contents.indexOf(START_JOKE)).concat(START_JOKE);
-        const lastRemains = contents.substring(contents.indexOf(END_JOKE));
-        const rawJoke = String.raw `${joke}`;
-        const result = `${firstRemains}\n${rawJoke}\n${lastRemains}`;
-        await (0, promises_1.writeFile)(filePath, result);
+        const startIndex = contents.indexOf(START_JOKE);
+        const endIndex = contents.indexOf(END_JOKE);
+        // Check if patterns exist to insert the joke
+        if (startIndex > 0 && endIndex > startIndex) {
+            const firstRemains = contents.substring(0, startIndex).concat(START_JOKE);
+            const lastRemains = contents.substring(endIndex);
+            const rawJoke = String.raw `${joke}`;
+            const result = `${firstRemains}\n${rawJoke}\n${lastRemains}`;
+            await (0, promises_1.writeFile)(filePath, result);
+        }
+        else {
+            throw new Error(`Please insert the comment blocks to ${fileName}`);
+        }
     }
     catch (error) {
         throw new Error(error.message);

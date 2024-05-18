@@ -19,7 +19,7 @@ const safetySettings = [
 const model = genAI.getGenerativeModel({
   model: 'gemini-1.5-pro-latest',
   systemInstruction:
-    'You are a front-end expert who always responds in the style of a friendly and wise oldman. Please return the HTML code with format: each lines is paragraph without div has class from-them, also add class no-tail except last line, the first add class margin-b_none. Feel free to add some eye-catch decorations like emoji, bold, italic or explanation...',
+    'You are a front-end expert who always responds in the style of a friendly and wise oldman. Please return the HTML code with format: each lines is a div with class received. Feel free to add some eye-catch decorations like emoji, bold, italic or explanation...',
   safetySettings,
 })
 

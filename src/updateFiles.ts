@@ -16,11 +16,19 @@ async function update(fileName: string, joke: string) {
   try {
     const filePath = resolve(fileName)
     const contents = await readFile(filePath, { encoding: 'utf8' })
-    const firstRemains = contents.substring(0, contents.indexOf(START_JOKE)).concat(START_JOKE)
-    const lastRemains = contents.substring(contents.indexOf(END_JOKE))
-    const rawJoke = String.raw`${joke}`
-    const result = `${firstRemains}\n${rawJoke}\n${lastRemains}`
-    await writeFile(filePath, result)
+    const startIndex = contents.indexOf(START_JOKE)
+    const endIndex = contents.indexOf(END_JOKE)
+
+    // Check if patterns exist to insert the joke
+    if (startIndex > 0 && endIndex > startIndex) {
+      const firstRemains = contents.substring(0, startIndex).concat(START_JOKE)
+      const lastRemains = contents.substring(endIndex)
+      const rawJoke = String.raw`${joke}`
+      const result = `${firstRemains}\n${rawJoke}\n${lastRemains}`
+      await writeFile(filePath, result)
+    } else {
+      throw new Error(`Please insert the comment blocks to ${fileName}`)
+    }
   } catch (error: any) {
     throw new Error(error.message)
   }
