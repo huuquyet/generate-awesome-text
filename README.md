@@ -6,8 +6,8 @@ Ready for a dad joke generated with Gemini model?
 
 <!-- START_JOKE -->
 <p class="from-me">Please tell a dad joke that make everybody laugh</p>
-<p class="from-them"> 😅😂🤣 You know what the magician did when he strolled down the street? </p> 
-<p class="from-them">  He turned into a store!  </p> 
+<p class="from-them">Why do fish live in salt water?</p><br> 
+<p class="from-them">Because pepper makes them sneeze! 😂 </p> 
 
 <!-- END_JOKE -->
 
