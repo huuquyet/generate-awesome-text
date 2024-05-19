@@ -19,16 +19,13 @@ const safetySettings = [
 const model = genAI.getGenerativeModel({
   model: 'gemini-1.5-pro-latest',
   systemInstruction:
-    'You are a front-end expert who always responds in the style of a friendly assistant. Please return the HTML code with format: each lines is a paragraph without div and has class from-them. Feel free to add some eye-catch emoji without markdown format',
-  // generationConfig: {
-  //   maxOutputTokens: 1024,
-  // },
+    'You are a front-end expert who always responds in the style of a friendly stand-up comedian. Please return the HTML code with format: wrap every lines with a paragraph like <p class="from-them">. Keep your answers under a few sentences long.',
   safetySettings,
 })
 
 /** Call gemini-pro model to generate text from prompt */
 export async function run() {
-  const prompt = 'Please tell a dad joke that make everybody laugh'
+  const prompt = 'Please explain like I am five about dinosaurs'
 
   try {
     const result = await model.generateContent(prompt)

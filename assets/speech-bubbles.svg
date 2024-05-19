@@ -12,10 +12,12 @@
                     font-family: Inter, Roboto, Helvetica, "Segoe UI", Montserrat, Arial, sans-serif;
                     font-size: 1.25rem;
                     line-height: 1.5;
+                    background-size: 300% 300%;
+                    color: white;
                 }
 
                 article {
-                    background-color: white;
+                    /* background-color: white; */
                     border-radius: 0.25rem;
                     display: flex;
                     flex-direction: column;
@@ -52,48 +54,26 @@
                     background-color: #248bf5;
                 }
 
-                article p.from-me:last-child::before {
-                    border-bottom-left-radius: 0.8rem 0.7rem;
-                    border-right: 1rem solid #248bf5;
-                    right: -0.35rem;
-                    transform: translate(0, -0.1rem);
-                }
-
-                article p.from-me:last-child::after {
-                    background-color: #fff;
-                    border-bottom-left-radius: 0.5rem;
-                    right: -40px;
-                    transform: translate(-30px, -2px);
-                    width: 10px;
-                }
-
                 article p.from-them {
                     color: black;
                     align-self: flex-start;
                     background-color: #e5e5ea;
                 }
-
-                article p.from-them:last-child::before {
-                    border-bottom-right-radius: 0.8rem 0.7rem;
-                    border-left: 1rem solid #e5e5ea;
-                    left: -0.35rem;
-                    transform: translate(0, -0.1rem);
-                }
-
-                article p.from-them:last-child::after {
-                    background-color: #fff;
-                    border-bottom-right-radius: 0.5rem;
-                    left: 20px;
-                    transform: translate(-30px, -2px);
-                    width: 10px;
-                }
             </style>
             <div class="container">
                 <article>
                     <!-- START_JOKE -->
-<p class="from-me">Please tell a dad joke that make everybody laugh</p>
-<p class="from-them">Why do fish live in salt water?</p>
-<p class="from-them">Because pepper makes them sneeze! 😂 </p> 
+<p class="from-me">Please write a short poem about happiness</p>
+Okay, here is a short poem about happiness, just like you asked! I put it inside HTML code so you can easily add it to your website. 😉
+
+```html
+<p class="from-them">Happiness, a fleeting thing,</p>
+<p class="from-them">Like sunshine on a butterfly's wing.</p>
+<p class="from-them">A moment caught, a smile so bright,</p>
+<p class="from-them">Chasing away the darkest night.</p> 
+```
+
+Let me know if you need anything else! 😊 
 
 <!-- END_JOKE -->
 

@@ -25,7 +25,7 @@ async function update(fileName: string, prompt: string, joke: string) {
       const lastRemains = contents.substring(endIndex)
       const fromMe = String.raw`<p class="from-me">${prompt}</p>`
       const rawJoke = String.raw`${joke}`
-      const result = `${firstRemains}\n${fromMe}\n${rawJoke}\n${lastRemains}`
+      const result = `${firstRemains}\n${fromMe}\n${rawJoke}${lastRemains}`
       await writeFile(filePath, result)
     } else {
       throw new Error(`Please insert the comment blocks to ${fileName}`)

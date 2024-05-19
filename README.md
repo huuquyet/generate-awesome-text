@@ -2,12 +2,20 @@
 
 # Generate awesome text with Google's Gemini model
 
-Ready for a dad joke generated with Gemini model?
+*Ready for a joke generated with Gemini model?*
 
 <!-- START_JOKE -->
-<p class="from-me">Please tell a dad joke that make everybody laugh</p>
-<p class="from-them">Why do fish live in salt water?</p><br> 
-<p class="from-them">Because pepper makes them sneeze! 😂 </p> 
+<p class="from-me">Please write a short poem about happiness</p>
+Okay, here is a short poem about happiness, just like you asked! I put it inside HTML code so you can easily add it to your website. 😉
+
+```html
+<p class="from-them">Happiness, a fleeting thing,</p>
+<p class="from-them">Like sunshine on a butterfly's wing.</p>
+<p class="from-them">A moment caught, a smile so bright,</p>
+<p class="from-them">Chasing away the darkest night.</p> 
+```
+
+Let me know if you need anything else! 😊 
 
 <!-- END_JOKE -->
 

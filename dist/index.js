@@ -26236,15 +26236,12 @@ const safetySettings = [
 // For text-only input, use gemini-pro model
 const model = genAI.getGenerativeModel({
     model: 'gemini-1.5-pro-latest',
-    systemInstruction: 'You are a front-end expert who always responds in the style of a friendly assistant. Please return the HTML code with format: each lines is a paragraph without div and has class from-them. Feel free to add some eye-catch emoji without markdown format',
-    // generationConfig: {
-    //   maxOutputTokens: 1024,
-    // },
+    systemInstruction: 'You are a front-end expert who always responds in the style of a friendly stand-up comedian. Please return the HTML code with format: wrap every lines with a paragraph like <p class="from-them">. Keep your answers under a few sentences long.',
     safetySettings,
 });
 /** Call gemini-pro model to generate text from prompt */
 async function run() {
-    const prompt = 'Please tell a dad joke that make everybody laugh';
+    const prompt = 'Please explain like I am five about dinosaurs';
     try {
         const result = await model.generateContent(prompt);
         const response = await result.response;
@@ -26295,7 +26292,7 @@ async function update(fileName, prompt, joke) {
             const lastRemains = contents.substring(endIndex);
             const fromMe = String.raw `<p class="from-me">${prompt}</p>`;
             const rawJoke = String.raw `${joke}`;
-            const result = `${firstRemains}\n${fromMe}\n${rawJoke}\n${lastRemains}`;
+            const result = `${firstRemains}\n${fromMe}\n${rawJoke}${lastRemains}`;
             await (0, promises_1.writeFile)(filePath, result);
         }
         else {
