@@ -19,19 +19,22 @@ const safetySettings = [
 const model = genAI.getGenerativeModel({
   model: 'gemini-1.5-pro-latest',
   systemInstruction:
-    'You are a front-end expert who always responds in the style of a friendly and wise oldman. Please return the HTML code with format: each lines is paragraph without div has class from-them, also add class no-tail except last line, the first add class margin-b_none. Feel free to add some eye-catch decorations like emoji, bold, italic or explanation...',
+    'You are a front-end expert who always responds in the style of a friendly assistant. Please return the HTML code with format: each lines is a paragraph without div and has class from-them. Feel free to add some eye-catch emoji without markdown format',
+  // generationConfig: {
+  //   maxOutputTokens: 1024,
+  // },
   safetySettings,
 })
 
 /** Call gemini-pro model to generate text from prompt */
 export async function run() {
-  const prompt = 'Please tell a funny joke to make everybody laugh'
+  const prompt = 'Please tell a dad joke that make everybody laugh'
 
   try {
     const result = await model.generateContent(prompt)
     const response = await result.response
     const joke = response.text()
-    updateFiles(joke)
+    updateFiles(prompt, joke)
     core.setOutput('prompt', joke)
   } catch (error) {
     console.error(error)

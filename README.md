@@ -5,15 +5,9 @@
 Ready for a dad joke generated with Gemini model?
 
 <!-- START_JOKE -->
-<p class="from-them margin-b_none no-tail">
-  Why don't scientists trust atoms? 
-</p>
-<p class="from-them no-tail">
-  Because they make up everything!  😂 
-</p>
-<p class="from-them">
-  Get it?  It's a knee-slapper! 😄  
-</p> 
+<p class="from-me">Please tell a dad joke that make everybody laugh</p>
+<p class="from-them"> 😅😂🤣 You know what the magician did when he strolled down the street? </p> 
+<p class="from-them">  He turned into a store!  </p> 
 
 <!-- END_JOKE -->
 

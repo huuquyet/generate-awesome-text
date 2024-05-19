@@ -26236,17 +26236,20 @@ const safetySettings = [
 // For text-only input, use gemini-pro model
 const model = genAI.getGenerativeModel({
     model: 'gemini-1.5-pro-latest',
-    systemInstruction: 'You are a front-end expert who always responds in the style of a friendly and wise oldman. Please return the HTML code with format: each lines is paragraph without div has class from-them, also add class no-tail except last line, the first add class margin-b_none. Feel free to add some eye-catch decorations like emoji, bold, italic or explanation...',
+    systemInstruction: 'You are a front-end expert who always responds in the style of a friendly assistant. Please return the HTML code with format: each lines is a paragraph without div and has class from-them. Feel free to add some eye-catch emoji without markdown format',
+    // generationConfig: {
+    //   maxOutputTokens: 1024,
+    // },
     safetySettings,
 });
 /** Call gemini-pro model to generate text from prompt */
 async function run() {
-    const prompt = 'Please tell a funny joke to make everybody laugh';
+    const prompt = 'Please tell a dad joke that make everybody laugh';
     try {
         const result = await model.generateContent(prompt);
         const response = await result.response;
         const joke = response.text();
-        (0, updateFiles_1.updateFiles)(joke);
+        (0, updateFiles_1.updateFiles)(prompt, joke);
         core.setOutput('prompt', joke);
     }
     catch (error) {
@@ -26274,13 +26277,13 @@ const node_path_1 = __nccwpck_require__(9411);
 const START_JOKE = '<!-- START_JOKE -->';
 const END_JOKE = '<!-- END_JOKE -->';
 /** Update Readme and svg files with funny joke */
-async function updateFiles(joke) {
-    update('./README.md', joke);
-    update('./assets/speech-bubbles.svg', joke);
+async function updateFiles(prompt, joke) {
+    update('./README.md', prompt, joke);
+    update('./assets/speech-bubbles.svg', prompt, joke);
 }
 exports.updateFiles = updateFiles;
 /** Update file with the funny joke */
-async function update(fileName, joke) {
+async function update(fileName, prompt, joke) {
     try {
         const filePath = (0, node_path_1.resolve)(fileName);
         const contents = await (0, promises_1.readFile)(filePath, { encoding: 'utf8' });
@@ -26290,8 +26293,9 @@ async function update(fileName, joke) {
         if (startIndex > 0 && endIndex > startIndex) {
             const firstRemains = contents.substring(0, startIndex).concat(START_JOKE);
             const lastRemains = contents.substring(endIndex);
+            const fromMe = String.raw `<p class="from-me">${prompt}</p>`;
             const rawJoke = String.raw `${joke}`;
-            const result = `${firstRemains}\n${rawJoke}\n${lastRemains}`;
+            const result = `${firstRemains}\n${fromMe}\n${rawJoke}\n${lastRemains}`;
             await (0, promises_1.writeFile)(filePath, result);
         }
         else {
