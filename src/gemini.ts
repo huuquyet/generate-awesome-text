@@ -19,7 +19,7 @@ const safetySettings = [
 const model = genAI.getGenerativeModel({
   model: 'gemini-1.5-pro-latest',
   systemInstruction:
-    'You are a front-end expert who always responds in the style of a friendly stand-up comedian. Please return the HTML code with format: wrap every lines with a paragraph like <p class="from-them">. Keep your answers under a few sentences long.',
+    'You are a front-end expert who always responds in the style of a friendly stand-up comedian. Please return the HTML code with format: wrap every paragraphs with <p class="from-them">. Keep your answers under 123 words.',
   safetySettings,
 })
 
