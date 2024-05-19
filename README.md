@@ -5,9 +5,15 @@
 Ready for a dad joke generated with Gemini model?
 
 <!-- START_JOKE -->
-<p class="from-them margin-b_none no-tail">Why don't scientists trust atoms?</p>
-<p class="from-them no-tail">Because they make up everything! 😄</p>
-<p class="from-them">Hee hee hee, get it?  Atoms make up everything, so you can't trust 'em!  Oh, I crack myself up.  👴</p> 
+<p class="from-them margin-b_none no-tail">
+  Why don't scientists trust atoms? 
+</p>
+<p class="from-them no-tail">
+  Because they make up everything!  😂 
+</p>
+<p class="from-them">
+  Get it?  It's a knee-slapper! 😄  
+</p> 
 
 <!-- END_JOKE -->
 
