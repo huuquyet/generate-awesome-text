@@ -34,6 +34,7 @@
                     position: relative;
                     word-wrap: break-word;
                     margin: 4px 0;
+                    animation: fade 1s linear both;
                 }
 
                 article p::before,
@@ -42,10 +43,6 @@
                     content: "";
                     height: 1rem;
                     position: absolute;
-                }
-
-                article p[class^="from-"] {
-                    width: fit-content;
                 }
 
                 article p.from-me {
@@ -61,48 +58,25 @@
                 }
                 
                 article p:nth-child(1) {
-                    animation: fade 10s steps(40, end) infinite;
+                    animation-delay: 1s;
                 }
                 article p:nth-child(2) {
-                    opacity: 0;
-                    animation: fade2 10s steps(20, end) infinite;
                     animation-delay: 2s;
                 }
                 article p:nth-child(3) {
-                    opacity: 0;
-                    animation: fade3 10s steps(20, end) infinite;
-                    animation-delay: 4s;
+                    animation-delay: 3s;
                 }
                 article p:nth-child(4) {
-                    opacity: 0;
-                    animation: fade4 10s steps(20, end) infinite;
-                    animation-delay: 6s;
+                    animation-delay: 4s;
                 }
                 article p:nth-child(5) {
-                    opacity: 0;
-                    animation: fade5 10s steps(20, end) infinite;
-                    animation-delay: 8s;
+                    animation-delay: 5s;
                 }
 
                 @keyframes fade {
-                    0% { opacity: 0; }
-                    20%, 100% { opacity: 1; }
-                }
-                @keyframes fade2 {
-                    0% { opacity: 0; }
-                    40%, 100% { opacity: 1; }
-                }
-                @keyframes fade3 {
-                    0% { opacity: 0; }
-                    60%, 100% { opacity: 1; }
-                }
-                @keyframes fade4 {
-                    0% { opacity: 0; }
-                    80%, 100% { opacity: 1; }
-                }
-                @keyframes fade5 {
-                    0% { opacity: 0; }
-                    100% { opacity: 1; }
+                    0% { opacity: 0; transform: scale(0.1); }
+                    90% { opacity: 1; transform: scale(1.1); }
+                    100% { transform: scale(1); }
                 }
             </style>
             <div class="container">

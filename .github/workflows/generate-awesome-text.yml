@@ -34,7 +34,7 @@ jobs:
       env: 
         GEMINI_API_TOKEN: ${{ secrets.GEMINI_API_TOKEN }}
       with:
-        prompt: "Please tell a hilarious dad joke about a playful dog"
+        prompt: "Please tell a hilarious dad joke about baby shark"
 
     # Push awesome text to main branch
     # Note: the following account information will not work on GHES
