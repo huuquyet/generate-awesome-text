@@ -61,35 +61,25 @@
                 }
                 
                 article p:nth-child(1) {
-                    white-space: nowrap;
-                    overflow: hidden;
                     animation: fade 10s steps(40, end) infinite;
                 }
                 article p:nth-child(2) {
                     opacity: 0;
-                    white-space: nowrap;
-                    overflow: hidden;
                     animation: fade2 10s steps(20, end) infinite;
                     animation-delay: 2s;
                 }
                 article p:nth-child(3) {
                     opacity: 0;
-                    white-space: nowrap;
-                    overflow: hidden;
                     animation: fade3 10s steps(20, end) infinite;
                     animation-delay: 4s;
                 }
                 article p:nth-child(4) {
                     opacity: 0;
-                    white-space: nowrap;
-                    overflow: hidden;
                     animation: fade4 10s steps(20, end) infinite;
                     animation-delay: 6s;
                 }
                 article p:nth-child(5) {
                     opacity: 0;
-                    white-space: nowrap;
-                    overflow: hidden;
                     animation: fade5 10s steps(20, end) infinite;
                     animation-delay: 8s;
                 }
