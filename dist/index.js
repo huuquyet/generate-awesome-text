@@ -26297,7 +26297,7 @@ async function update(fileName, prompt, joke) {
             await (0, promises_1.writeFile)(filePath, result);
         }
         else {
-            console.log(`READEME.md was not updated. Please insert the comment blocks to ${fileName}`);
+            console.log(`${fileName} was not updated. Please insert the comment blocks to ${fileName}`);
         }
     }
     catch (error) {
