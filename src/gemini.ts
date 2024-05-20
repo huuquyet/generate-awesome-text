@@ -25,8 +25,8 @@ const model = genAI.getGenerativeModel({
 
 /** Call gemini-pro model to generate text from prompt */
 export async function run() {
-  // `input` defined in action metadata file
-  const prompt = core.getInput('input') || 'Please tell a hilarious dad joke about a playful dog'
+  // `prompt` defined in action metadata file
+  const prompt = core.getInput('prompt')
 
   try {
     const result = await model.generateContent(prompt)
