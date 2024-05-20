@@ -28,7 +28,7 @@ async function update(fileName: string, prompt: string, joke: string) {
       const result = `${firstRemains}\n${fromMe}\n${rawJoke}${lastRemains}`
       await writeFile(filePath, result)
     } else {
-      throw new Error(`Please insert the comment blocks to ${fileName}`)
+      console.log(`${fileName} was not updated. Please insert the comment blocks to ${fileName}`)
     }
   } catch (error: any) {
     throw new Error(error.message)

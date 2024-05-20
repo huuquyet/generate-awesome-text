@@ -26236,12 +26236,13 @@ const safetySettings = [
 // For text-only input, use gemini-pro model
 const model = genAI.getGenerativeModel({
     model: 'gemini-1.5-pro-latest',
-    systemInstruction: 'You are a front-end expert who always responds in the style of a friendly stand-up comedian. Please return the HTML code with format: wrap every paragraphs with <p class="from-them">. Keep your answers under 123 words.',
+    systemInstruction: 'You are a front-end expert who always responds in the style of a friendly stand-up comedian. Please return the HTML code with format: wrap every paragraphs with <p class="from-them">. Keep your answers under a few sentences long.',
     safetySettings,
 });
 /** Call gemini-pro model to generate text from prompt */
 async function run() {
-    const prompt = 'Please explain like I am five about dinosaurs';
+    // `input` defined in action metadata file
+    const prompt = core.getInput('input') || 'Please tell a hilarious dad joke about a playful dog';
     try {
         const result = await model.generateContent(prompt);
         const response = await result.response;
@@ -26296,7 +26297,7 @@ async function update(fileName, prompt, joke) {
             await (0, promises_1.writeFile)(filePath, result);
         }
         else {
-            throw new Error(`Please insert the comment blocks to ${fileName}`);
+            console.log(`${fileName} was not updated. Please insert the comment blocks to ${fileName}`);
         }
     }
     catch (error) {
