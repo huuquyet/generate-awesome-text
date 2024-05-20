@@ -7,15 +7,17 @@ branding:
   icon: "file-text"
   color: "yellow"
 
-# Enter the input in order to customize
+# Enter the prompt in order to chat with Gemini model
 inputs:
-  input: # id of input
-    description: "Input param send to the action"
+  prompt: # id of input
+    description: "Input prompt send to the action"
+    required: true
+    default: "Please tell a hilarious dad joke for kids about the weather today"
 
-# Ouput generated prompt to use later
+# Ouput generated result to use later
 outputs:
-  prompt:
-    description: "The generated prompt by Gemini model for later using"
+  result:
+    description: "The generated result by Gemini model for later using"
 
 runs:
   using: "node20"

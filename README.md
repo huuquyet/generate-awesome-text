@@ -5,10 +5,10 @@
 *Ready for a joke generated with Gemini model?*
 
 <!-- START_JOKE -->
-<p class="from-me">Please explain like I am five about dinosaurs</p>
-<p class="from-them">
-Alright, imagine a lizard, right? But HUGE! Like, bigger than your house! And some of them had feathers! They were around a looooong time ago, way before your parents, even before your grandparents.  They roamed the Earth, some ate plants, others ate meat.  But then, BOOM! A giant rock fell from space and most of them disappeared!  Sad, right?  But we can still find their bones and learn about them! Pretty cool, huh? 
-</p> 
+<p class="from-me">Please tell a hilarious dad joke about a playful dog</p>
+<p class="from-them">Why do dogs run in circles? </p>
+
+<p class="from-them">Because it's really hard to run in squares!  *ba dum tss*  I'll be here all week folks. Try the veal! </p> 
 <!-- END_JOKE -->
 
 <div align="center" width="100%">
