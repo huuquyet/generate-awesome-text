@@ -29,7 +29,7 @@ But hey, don't take my word for it.  Look up some pictures, you won't be disappo
   <img alt="Speech bubbles" src="./assets/speech-bubbles.svg" width="100%">
 </div>
 
-**Want to chat with Gemini as a stand-up comedian?** Just click [this](https://github.com/huuquyet/generate-awesome-text/issues/new?assignees=&labels=generate&projects=&title=Please+tell+me+how+to+master+a+new+skill&body=Feel+free+to+change+the+title+then+Press+Submit%21)
+**Want to chat with Gemini as a stand-up comedian?** Just click [this](https://github.com/huuquyet/generate-awesome-text/issues/new?assignees=&labels=generate&projects=&title=Please+tell+me+how+to+be+more+funny+and+creative&body=Feel+free+to+change+the+title+then+Press+Submit%21)
 
 ## API TOKEN
 
