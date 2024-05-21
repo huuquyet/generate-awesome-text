@@ -2,8 +2,8 @@ name: generate-awesome-text
 
 on:
   # Run automatically everyday at 00:10
-  # schedule:
-  # - cron: "10 0 * * *"
+  schedule:
+  - cron: "10 0 * * *"
   
   # Allows to manually run the job at any time
   workflow_dispatch:
@@ -20,21 +20,21 @@ permissions:
 #   cancel-in-progress: true
 
 jobs:
-  generate_text:
-    name: Generate awesome text with Javascript
+  generate_awesome_text:
+    name: Generate awesome text with Google's Gemini model
     runs-on: ubuntu-latest
 
     steps:
     # Checkout the main branch
     - uses: actions/checkout@v4
 
-    # Uses action in the root directory to generate awesome text
+    # Use action to generate awesome text with Google's Gemini model
     - name: Generate awesome text
       uses: huuquyet/generate-awesome-text@main
       env: 
         GEMINI_API_TOKEN: ${{ secrets.GEMINI_API_TOKEN }}
       with:
-        prompt: "Please tell a hilarious dad joke about baby shark"
+        prompt: "Please tell me how to learn a new skill"
 
     # Push awesome text to main branch
     # Note: the following account information will not work on GHES

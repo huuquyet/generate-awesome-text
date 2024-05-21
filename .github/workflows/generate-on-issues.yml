@@ -1,4 +1,6 @@
 name: generate-on-issues
+
+# Run when new issues created or with label
 on:
   issues:
     types:
@@ -7,8 +9,9 @@ on:
       - labeled
 
 jobs:
-  generate-on-issues:
+  generate_on_issues:
     if: startsWith(github.event.issue.title, 'Please') || github.event.label.name == 'generate'
+    name: Generate with title of issue starts with Please or with label generate
     runs-on: ubuntu-latest
     permissions:
       contents: write
@@ -18,7 +21,7 @@ jobs:
     # Checkout the main branch
     - uses: actions/checkout@v4
       
-    # Uses action in the root directory to generate awesome text
+    # Use action to generate awesome text with Google's Gemini model
     - name: Generate awesome text
       uses: huuquyet/generate-awesome-text@main
       env: 
@@ -40,6 +43,7 @@ jobs:
         NUMBER: ${{ github.event.issue.number }}
         USER: ${{ github.event.issue.user.login }}
 
+    # Add comment the result to created issue
     - name: Add comment
       run: |
         gh issue comment "$NUMBER" --body "$BODY"

@@ -1,86 +1,86 @@
 <svg fill="none" viewBox="0 0 600 400" width="600" height="400" xmlns="http://www.w3.org/2000/svg">
-    <!-- Inspired from https://codepen.io/AllThingsSmitty/pen/jommGQ -->
-    <foreignObject width="100%" height="100%">
-        <div xmlns="http://www.w3.org/1999/xhtml">
-            <style>
-                .container {
-                    margin: 0 auto;
-                    /* max-width: 600px; */
-                    display: flex;
-                    justify-content: center;
-                    align-items: center;
-                    font-family: Inter, Roboto, Helvetica, "Segoe UI", Montserrat, Arial, sans-serif;
-                    font-size: 16px;
-                    line-height: 1.5;
-                    background-size: 300% 300%;
-                    color: white;
-                }
+  <!-- Inspired from https://codepen.io/AllThingsSmitty/pen/jommGQ -->
+  <foreignObject width="100%" height="100%">
+    <div xmlns="http://www.w3.org/1999/xhtml">
+      <style>
+        .container {
+          margin: 0 auto;
+          /* max-width: 600px; */
+          display: flex;
+          justify-content: center;
+          align-items: center;
+          font-family: Inter, Roboto, Helvetica, "Segoe UI", Montserrat, Arial, sans-serif;
+          font-size: 16px;
+          line-height: 1.5;
+          background-size: 300% 300%;
+          color: white;
+        }
 
-                article {
-                    /* background-color: white; */
-                    border-radius: 0.25rem;
-                    display: flex;
-                    flex-direction: column;
-                    text-align: left;
-                    width: 100%;
-                    height: 100%;
-                    padding: 0.5rem 1.5rem;
-                }
+        article {
+          /* background-color: white; */
+          border-radius: 0.25rem;
+          display: flex;
+          flex-direction: column;
+          text-align: left;
+          width: 100%;
+          height: 100%;
+          padding: 0.5rem 1.5rem;
+        }
 
-                article p {
-                    border-radius: 1.15rem;
-                    max-width: 75%;
-                    padding: 0.5rem 0.9rem;
-                    position: relative;
-                    word-wrap: break-word;
-                    margin: 4px 0;
-                    animation: fade 1s linear both;
-                }
+        article p {
+          border-radius: 1.15rem;
+          max-width: 75%;
+          padding: 0.5rem 0.9rem;
+          position: relative;
+          word-wrap: break-word;
+          margin: 4px 0;
+          animation: fade 1s linear both;
+        }
 
-                article p::before,
-                article p::after {
-                    bottom: -0.1rem;
-                    content: "";
-                    height: 1rem;
-                    position: absolute;
-                }
+        article p::before,
+        article p::after {
+          bottom: -0.1rem;
+          content: "";
+          height: 1rem;
+          position: absolute;
+        }
 
-                article p.from-me {
-                    color: white;
-                    align-self: flex-end;
-                    background-color: #248bf5;
-                }
+        article p.from-me {
+          color: white;
+          align-self: flex-end;
+          background-color: #248bf5;
+        }
 
-                article p.from-them {
-                    color: black;
-                    align-self: flex-start;
-                    background-color: #e5e5ea;
-                }
-                
-                article p:nth-child(1) {
-                    animation-delay: 1s;
-                }
-                article p:nth-child(2) {
-                    animation-delay: 2s;
-                }
-                article p:nth-child(3) {
-                    animation-delay: 3s;
-                }
-                article p:nth-child(4) {
-                    animation-delay: 4s;
-                }
-                article p:nth-child(5) {
-                    animation-delay: 5s;
-                }
+        article p.from-them {
+          color: black;
+          align-self: flex-start;
+          background-color: #e5e5ea;
+        }
+        
+        article p:nth-child(1) {
+          animation-delay: 1s;
+        }
+        article p:nth-child(2) {
+          animation-delay: 2s;
+        }
+        article p:nth-child(3) {
+          animation-delay: 3s;
+        }
+        article p:nth-child(4) {
+          animation-delay: 4s;
+        }
+        article p:nth-child(5) {
+          animation-delay: 5s;
+        }
 
-                @keyframes fade {
-                    0% { opacity: 0; transform: scale(0.1); }
-                    90% { opacity: 1; transform: scale(1.1); }
-                    100% { transform: scale(1); }
-                }
-            </style>
-            <div class="container">
-                <article>
+        @keyframes fade {
+          0% { opacity: 0; transform: scale(0.1); }
+          90% { opacity: 1; transform: scale(1.1); }
+          100% { transform: scale(1); }
+        }
+      </style>
+      <div class="container">
+        <article>
 <!-- START_JOKE -->
 <p class="from-me">Please tell what is the dragons look like?</p>
 <p class="from-them">
@@ -100,8 +100,8 @@ But hey, don't take my word for it.  Look up some pictures, you won't be disappo
 </p> 
 <!-- END_JOKE -->
 
-                </article>
-            </div>
-        </div>
-    </foreignObject>
+        </article>
+      </div>
+    </div>
+  </foreignObject>
 </svg>
