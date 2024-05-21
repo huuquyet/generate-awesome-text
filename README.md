@@ -15,6 +15,8 @@
   <img alt="Speech bubbles" src="./assets/speech-bubbles.svg" width="100%">
 </div>
 
+**Want to chat with Gemini? Just click [this](https://github.com/huuquyet/generate-awesome-text/issues/new?assignees=&labels=generate&projects=&title=Please+tell+what+is+the+wearther+like+in+Danang&body=Press+Submit%21)**
+
 ## API TOKEN
 
 ### GEMINI_API_TOKEN
