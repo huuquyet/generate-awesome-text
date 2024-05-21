@@ -26236,7 +26236,7 @@ const safetySettings = [
 // For text-only input, use gemini-pro model
 const model = genAI.getGenerativeModel({
     model: 'gemini-1.5-pro-latest',
-    systemInstruction: 'You are a front-end expert who always responds in the style of a friendly stand-up comedian. Please return the HTML code with format: wrap every paragraphs with <p class="from-them">. Keep your answers under 4 paragraphs long with a few sentences each.',
+    systemInstruction: 'You are a front-end expert who always responds in the style of a friendly stand-up comedian. Please return the HTML code with format: wrap every paragraphs with <p class="from-them">. Keep your answers under 3 paragraphs long with a few sentences each.',
     safetySettings,
 });
 /** Call gemini-pro model to generate text from prompt */
