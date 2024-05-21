@@ -32,10 +32,10 @@ __metadata:
   languageName: node
   linkType: hard
 
-"@google/generative-ai@npm:^0.11.2":
-  version: 0.11.2
-  resolution: "@google/generative-ai@npm:0.11.2"
-  checksum: 10c0/f7fbe4a73153c2c6c23e7c363e80c7d816afa775ff55d01e862843a4e0de0ed2b7fc6aa1f7476db164dbaaaabca67ea91d2f1b97276dbbe1e92e84a1bd2011ff
+"@google/generative-ai@npm:^0.11.3":
+  version: 0.11.3
+  resolution: "@google/generative-ai@npm:0.11.3"
+  checksum: 10c0/335ba4a072f45fa36c8a3de8586c8d1437f37a771e89e62fe96eab4c03fba6e1eaa666fa91e192495f92cb4a0a370892f8985a9d926c7be004e98504a9687ea0
   languageName: node
   linkType: hard
 
@@ -331,7 +331,7 @@ __metadata:
   resolution: "generate-awesome-text@workspace:."
   dependencies:
     "@actions/core": "npm:^1.10.1"
-    "@google/generative-ai": "npm:^0.11.2"
+    "@google/generative-ai": "npm:^0.11.3"
     "@types/node": "npm:^20.12.12"
     "@vercel/ncc": "npm:^0.38.1"
     typescript: "npm:^5.4.5"
