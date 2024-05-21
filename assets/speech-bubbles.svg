@@ -5,7 +5,7 @@
             <style>
                 .container {
                     margin: 0 auto;
-                    max-width: 600px;
+                    /* max-width: 600px; */
                     display: flex;
                     justify-content: center;
                     align-items: center;
@@ -34,6 +34,7 @@
                     position: relative;
                     word-wrap: break-word;
                     margin: 4px 0;
+                    animation: fade 1s linear both;
                 }
 
                 article p::before,
@@ -42,10 +43,6 @@
                     content: "";
                     height: 1rem;
                     position: absolute;
-                }
-
-                article p[class^="from-"] {
-                    width: fit-content;
                 }
 
                 article p.from-me {
@@ -58,6 +55,28 @@
                     color: black;
                     align-self: flex-start;
                     background-color: #e5e5ea;
+                }
+                
+                article p:nth-child(1) {
+                    animation-delay: 1s;
+                }
+                article p:nth-child(2) {
+                    animation-delay: 2s;
+                }
+                article p:nth-child(3) {
+                    animation-delay: 3s;
+                }
+                article p:nth-child(4) {
+                    animation-delay: 4s;
+                }
+                article p:nth-child(5) {
+                    animation-delay: 5s;
+                }
+
+                @keyframes fade {
+                    0% { opacity: 0; transform: scale(0.1); }
+                    90% { opacity: 1; transform: scale(1.1); }
+                    100% { transform: scale(1); }
                 }
             </style>
             <div class="container">

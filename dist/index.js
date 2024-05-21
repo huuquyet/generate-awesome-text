@@ -1830,7 +1830,7 @@ function isLoopbackAddress(host) {
 
 /***/ }),
 
-/***/ 3263:
+/***/ 2451:
 /***/ ((__unused_webpack_module, exports) => {
 
 "use strict";
@@ -2083,7 +2083,7 @@ const DEFAULT_API_VERSION = "v1beta";
  * We can't `require` package.json if this runs on web. We will use rollup to
  * swap in the version number here at build time.
  */
-const PACKAGE_VERSION = "0.11.2";
+const PACKAGE_VERSION = "0.11.3";
 const PACKAGE_LOG_HEADER = "genai-js";
 var Task;
 (function (Task) {
@@ -26222,7 +26222,7 @@ Object.defineProperty(exports, "__esModule", ({ value: true }));
 exports.run = void 0;
 const node_process_1 = __nccwpck_require__(7742);
 const core = __importStar(__nccwpck_require__(4016));
-const generative_ai_1 = __nccwpck_require__(3263);
+const generative_ai_1 = __nccwpck_require__(2451);
 const updateFiles_1 = __nccwpck_require__(7538);
 // You can get your API key at https://aistudio.google.com/app/apikey
 const API_KEY = node_process_1.env.GEMINI_API_TOKEN;
@@ -26236,13 +26236,13 @@ const safetySettings = [
 // For text-only input, use gemini-pro model
 const model = genAI.getGenerativeModel({
     model: 'gemini-1.5-pro-latest',
-    systemInstruction: 'You are a front-end expert who always responds in the style of a friendly stand-up comedian. Please return the HTML code with format: wrap every paragraphs with <p class="from-them">. Keep your answers under a few sentences long.',
+    systemInstruction: 'You are a front-end expert who always responds in the style of a friendly stand-up comedian. Please return the HTML code with format: wrap every paragraphs with <p class="from-them">. Keep your answers under 4 paragraphs long with a few sentences each.',
     safetySettings,
 });
 /** Call gemini-pro model to generate text from prompt */
 async function run() {
-    // `input` defined in action metadata file
-    const prompt = core.getInput('input') || 'Please tell a hilarious dad joke about a playful dog';
+    // `prompt` defined in action metadata file
+    const prompt = core.getInput('prompt');
     try {
         const result = await model.generateContent(prompt);
         const response = await result.response;
