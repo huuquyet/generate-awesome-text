@@ -27,7 +27,7 @@ But hey, no matter the weather, Danang is a beautiful place to visit. So grab yo
   <img alt="Speech bubbles" src="./assets/speech-bubbles.svg" width="100%">
 </div>
 
-**Want to chat with Gemini? Just click [this](https://github.com/huuquyet/generate-awesome-text/issues/new?assignees=&labels=generate&projects=&title=Please+tell+what+is+the+wearther+like+in+Danang&body=Press+Submit%21)**
+**Want to chat with Gemini? Just click [this](https://github.com/huuquyet/generate-awesome-text/issues/new?assignees=&labels=generate&projects=&title=Please+tell+what+is+the+weather+like+in+Danang&body=Feel+free+to+change+the+title+then+Press+Submit%21)**
 
 ## API TOKEN
 
