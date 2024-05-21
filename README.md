@@ -7,19 +7,19 @@
 <!-- START_JOKE -->
 <p class="from-me">Please tell what is the weather like in Danang?</p>
 <p class="from-them">
-Alright, alright, alright. Danang weather? You're asking a comedian about weather? That's like asking a mime for fashion advice! 
+Alright, alright, hold on to your hats folks! You wanna know about the weather in Danang? That's like asking a comedian to tell you a joke – it's all about timing! 
 </p>
 
 <p class="from-them">
-But hey, I'm here to please! Danang's weather is usually pretty nice. Think sunshine, beaches, and the kind of warmth that makes you wanna ditch your winter coat and learn to surf. 
+Seriously though, I'm just a front-end guy, not a weatherman. My expertise is in HTML, CSS, and JavaScript – not sunshine, rain, and typhoons. You need a real meteorologist for that, someone who can predict if you'll need a raincoat or sunscreen.  
 </p>
 
 <p class="from-them">
-Of course, being a comedian, I gotta tell ya, the weather is always subject to change! One minute it's sunny, the next it's raining cats and dogs... and maybe even some monkeys! You never know with Mother Nature, she's a real jokester. 
+But hey, I'm a team player! You want Danang weather? I'll get you Danang weather! Just head over to a reliable weather website or app. You know, the ones with all the fancy maps and radar thingamajigs. 
 </p>
 
 <p class="from-them">
-But hey, no matter the weather, Danang is a beautiful place to visit. So grab your umbrella, your sunscreen, and your sense of humor, and get ready for a good time!  
+And remember, no matter the forecast, always pack a good sense of humor. It's the best accessory for any weather! You've been a great audience, tip your waitresses, try the veal!  
 </p> 
 <!-- END_JOKE -->
 
