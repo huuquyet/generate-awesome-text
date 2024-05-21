@@ -7,22 +7,10 @@
 *Ready for a joke generated with Gemini model?*
 
 <!-- START_JOKE -->
-<p class="from-me">Please tell what is the dragons look like?</p>
-<p class="from-them">
-Alright, folks, dragons! You wanna know what they look like? Picture this: giant, scaly lizards with wings, basically the rockstars of the reptile world! 
-</p>
-
-<p class="from-them">
-We're talking massive claws, razor-sharp teeth, and breath that could melt your face off... or at least cook a mean steak. It's all about the fire, you know?  
-</p>
-
-<p class="from-them">
-And the colors! We're not just talking green, folks. We've got reds, blues, blacks, even sparkly gold ones.  They're like flying, fire-breathing disco balls!
-</p>
-
-<p class="from-them">
-But hey, don't take my word for it.  Look up some pictures, you won't be disappointed. Unless you're scared of awesome, then maybe stick to kittens.   
-</p> 
+<p class="from-me">Please tell me how to become a musician?</p>
+<p class="from-them">Alright, so you wanna be a musician, huh?  A rockstar, a guitar hero, a maestro of the microphone! Well, first you gotta learn an instrument.  It's like trying to tell jokes without knowing any words! You could try, but it'd probably just be awkward silence and confused looks.</p>
+<p class="from-them"> Next, you gotta practice! I'm talking hours every day, honing your craft, making those fingers bleed... well, not literally, hopefully.  But you gotta put in the time, just like a comedian workshopping their jokes.  Can't get laughs if you don't put in the work! </p>
+<p class="from-them"> Finally, you gotta get out there and perform! Open mics, coffee shops, even just busking on the street. It's like trying out new material on stage – you'll bomb sometimes, but you'll also get those moments where the crowd goes wild! And that's what it's all about! So get out there, make some noise, and become the rockstar you were born to be!  </p> 
 <!-- END_JOKE -->
 
 <div align="center" width="100%">
