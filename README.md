@@ -5,10 +5,10 @@
 *Ready for a joke generated with Gemini model?*
 
 <!-- START_JOKE -->
-<p class="from-me">Please tell a hilarious dad joke about a playful dog</p>
-<p class="from-them">Why do dogs run in circles? </p>
+<p class="from-me">Please tell a hilarious dad joke about baby shark</p>
+<p class="from-them">Alright, stop me if you've heard this one!  Why did the baby shark get sent to his room? Because he was being too shellfish!  </p> 
 
-<p class="from-them">Because it's really hard to run in squares!  *ba dum tss*  I'll be here all week folks. Try the veal! </p> 
+<p class="from-them">Get it? Shellfish? Like selfish but with a shell because he's a shark?  I'll be here all week, folks! Try the veal, tip your waitresses! </p> 
 <!-- END_JOKE -->
 
 <div align="center" width="100%">
