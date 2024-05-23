@@ -7,17 +7,17 @@ on:
   
   # Allows to manually run the job at any time
   workflow_dispatch:
-  # Run on every push or pull request on main branch
-  # push:
-  #   branches: [ "main" ]
+  # Run on every push on main branch
+  push:
+    branches: [ "main" ]
 
 permissions:
   contents: write
 
 # Only a single workflow in the same concurrency will run at the same time
-# concurrency:
-#   group: '${{ github.workflow }} @ ${{ github.head_ref || github.ref }}'
-#   cancel-in-progress: true
+concurrency:
+  group: '${{ github.workflow }} @ ${{ github.head_ref || github.ref }}'
+  cancel-in-progress: true
 
 jobs:
   generate_awesome_text:
@@ -43,5 +43,5 @@ jobs:
         git config user.name "github-actions[bot]"
         git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
         git add .
-        git commit -m ":robot: Generated awesome text"
+        git commit -m ":robot: Generated awesome text [skip ci]"
         git push
