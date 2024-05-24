@@ -8,9 +8,9 @@
 
 <!-- START_JOKE -->
 <p class="from-me">Please tell me how to be funny and creative</p>
-<p class="from-them">So you wanna be a regular chuckle factory, cranking out jokes and creative ideas like a malfunctioning comedy robot, huh?  Well, first,  you gotta find what makes *you* laugh!  Is it puns so bad they'd make a dad groan?  Observational humor about escalators?  Find your thing, because authenticity is hilarious.</p>
+<p class="from-them">So you wanna be a comedic genius, eh? A regular ol' George Carlin? Listen,  being funny is like writing good HTML, it takes practice! You gotta bomb a few times (on stage, not with your code) to find what really gets a laugh.</p>
 
-<p class="from-them">Next, pay attention to the world around you!  The best material comes from real life, my friend.  Eavesdrop on conversations, watch people try to parallel park,  find the funny in the mundane. Remember, life is a joke, and you're just observing it from the front row.</p> 
+<p class="from-them">Creativity's the same way!  Don't be afraid to experiment.  Try new things, even if they seem weird.  You never know what's gonna be the next big hit! (Just like using Comic Sans on a website... just kidding, NEVER do that).</p> 
 <!-- END_JOKE -->
 
 <div align="center" width="100%">
