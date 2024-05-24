@@ -26,7 +26,8 @@ const model = genAI.getGenerativeModel({
 /** Call gemini-pro model to generate text from prompt */
 export async function run() {
   // `prompt` defined in action metadata file
-  const prompt = core.getInput('prompt')
+  const input = core.getInput('prompt')
+  const prompt = input.replace(/[\/\-\\^$*+?.;"()|[\]{}]/g, '') // sanitize input
 
   try {
     const result = await model.generateContent(prompt)
