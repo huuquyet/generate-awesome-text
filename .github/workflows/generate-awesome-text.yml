@@ -43,5 +43,5 @@ jobs:
         git config user.name "github-actions[bot]"
         git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
         git add .
-        git commit -m ":robot: Generated awesome text [skip ci]"
+        git commit -m ":robot: Generated awesome text with Gemini [skip ci]"
         git push

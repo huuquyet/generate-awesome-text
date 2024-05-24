@@ -5,12 +5,12 @@
       <style>
         .container {
           margin: 0 auto;
-          /* max-width: 600px; */
+          max-width: 600px;
           display: flex;
           justify-content: center;
           align-items: center;
           font-family: Inter, Roboto, Helvetica, "Segoe UI", Montserrat, Arial, sans-serif;
-          font-size: 16px;
+          font-size: 14px;
           line-height: 1.5;
           background-size: 300% 300%;
           color: white;

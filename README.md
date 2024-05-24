@@ -17,7 +17,8 @@
   <img alt="Speech bubbles" src="./assets/speech-bubbles.svg" width="100%">
 </div>
 
-**Want to chat with Gemini as a stand-up comedian?** Just click [this](https://github.com/huuquyet/generate-awesome-text/issues/new?assignees=&labels=generate&projects=&title=Please+tell+me+how+to+be+more+funny+and+creative&body=Feel+free+to+change+the+title+then+Press+Submit%21)
+**Want to chat with Gemini as a stand-up comedian?** Just click [this](https://github.com/huuquyet/generate-awesome-text/issues/new?assignees=&labels=gemini&projects=&title=Please+tell+me+how+to+be+more+funny+and+creative&body=Feel+free+to+change+the+title+then+Press+Submit%21)
+*or create a new issue with title starts with `Please` and add `gemini` label*
 
 ## API TOKEN
 
@@ -41,8 +42,10 @@ Create `.github/workflows/main.yml` workflow with following steps to call the ac
 
 ```yaml
 uses: huuquyet/generate-awesome-text@main
-env: 
-    GEMINI_API_TOKEN: ${{ secrets.GEMINI_API_TOKEN }}
+env:
+  GEMINI_API_TOKEN: ${{ secrets.GEMINI_API_TOKEN }}
+with:
+  prompt: "Please tell me how to be funny and creative"
 ```
 
 See [this](.github/workflows/generate-awesome-text.yml) for example usage
