@@ -1830,7 +1830,7 @@ function isLoopbackAddress(host) {
 
 /***/ }),
 
-/***/ 2451:
+/***/ 5833:
 /***/ ((__unused_webpack_module, exports) => {
 
 "use strict";
@@ -2083,7 +2083,7 @@ const DEFAULT_API_VERSION = "v1beta";
  * We can't `require` package.json if this runs on web. We will use rollup to
  * swap in the version number here at build time.
  */
-const PACKAGE_VERSION = "0.11.3";
+const PACKAGE_VERSION = "0.11.4";
 const PACKAGE_LOG_HEADER = "genai-js";
 var Task;
 (function (Task) {
@@ -26222,7 +26222,7 @@ Object.defineProperty(exports, "__esModule", ({ value: true }));
 exports.run = void 0;
 const node_process_1 = __nccwpck_require__(7742);
 const core = __importStar(__nccwpck_require__(4016));
-const generative_ai_1 = __nccwpck_require__(2451);
+const generative_ai_1 = __nccwpck_require__(5833);
 const updateFiles_1 = __nccwpck_require__(7538);
 // You can get your API key at https://aistudio.google.com/app/apikey
 const API_KEY = node_process_1.env.GEMINI_API_TOKEN;
