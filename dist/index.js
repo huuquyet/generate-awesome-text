@@ -26292,11 +26292,10 @@ async function update(fileName, prompt, joke) {
         if (!regex.test(contents)) {
             console.log(`Please add comment blocks in ${fileName} file and try again ⚠️`);
         }
-        const result = String.raw `
-        <p class="from-me">${prompt}</p>
-        ${joke}`;
+        const result = String.raw `<p class="from-me">${prompt}</p>
+    ${joke}`;
         // Replace string with regex
-        const newContents = contents.replace(regex, `$1${result}\n$2`);
+        const newContents = contents.replace(regex, `$1\n${result}\n$2`);
         await (0, promises_1.writeFile)(filePath, newContents);
     }
     catch (error) {

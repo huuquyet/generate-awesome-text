@@ -23,12 +23,11 @@ async function update(fileName: string, prompt: string, joke: string) {
       console.log(`Please add comment blocks in ${fileName} file and try again ⚠️`)
     }
 
-    const result = String.raw`
-        <p class="from-me">${prompt}</p>
-        ${joke}`
+    const result = String.raw`<p class="from-me">${prompt}</p>
+    ${joke}`
 
     // Replace string with regex
-    const newContents = contents.replace(regex, `$1${result}\n$2`)
+    const newContents = contents.replace(regex, `$1\n${result}\n$2`)
     await writeFile(filePath, newContents)
   } catch (error: any) {
     throw new Error(error.message)
