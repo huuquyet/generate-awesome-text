@@ -6,12 +6,12 @@
 
 *Ready for a joke generated with Gemini model?*
 
-<!-- START_JOKE -->
+<!-- START_CHAT -->
 <p class="from-me">Please tell me how to be funny and creative</p>
 <p class="from-them">So you wanna be a comedic genius, eh? A regular ol' George Carlin? Listen,  being funny is like writing good HTML, it takes practice! You gotta bomb a few times (on stage, not with your code) to find what really gets a laugh.</p>
 
 <p class="from-them">Creativity's the same way!  Don't be afraid to experiment.  Try new things, even if they seem weird.  You never know what's gonna be the next big hit! (Just like using Comic Sans on a website... just kidding, NEVER do that).</p> 
-<!-- END_JOKE -->
+<!-- END_CHAT -->
 
 <div align="center" width="100%">
   <img alt="Speech bubbles" src="./assets/speech-bubbles.svg" width="100%">
@@ -52,6 +52,6 @@ See [this](.github/workflows/generate-awesome-text.yml) for example usage
 Add a comment block to your `README.md` and `assets/speech-bubbles.svg` files to update joke automatically
 
 ```md
-<!-- START_JOKE -->
-<!-- END_JOKE -->
+<!-- START_CHAT -->
+<!-- END_CHAT -->
 ```

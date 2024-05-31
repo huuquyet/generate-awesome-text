@@ -32,10 +32,10 @@ __metadata:
   languageName: node
   linkType: hard
 
-"@google/generative-ai@npm:^0.11.4":
-  version: 0.11.4
-  resolution: "@google/generative-ai@npm:0.11.4"
-  checksum: 10c0/389e8ec87bda736ccc8f0c10e2cc3e8697ca3204eb2d962b261cf136096abc87daef3aad8cdc191098262287b981662be09fb4fdc7275231bfb9aa7c8563c639
+"@google/generative-ai@npm:^0.12.0":
+  version: 0.12.0
+  resolution: "@google/generative-ai@npm:0.12.0"
+  checksum: 10c0/bf5d365493bcd85933f9f057d895b5630fe35c0a28e3678216773fdb398203fb5df061fb9f046b70d5788de6f567b6fce6e51b5f47704796d780d085d195e1c4
   languageName: node
   linkType: hard
 
@@ -82,12 +82,12 @@ __metadata:
   languageName: node
   linkType: hard
 
-"@types/node@npm:^20.12.12":
-  version: 20.12.12
-  resolution: "@types/node@npm:20.12.12"
+"@types/node@npm:^20.12.13":
+  version: 20.12.13
+  resolution: "@types/node@npm:20.12.13"
   dependencies:
     undici-types: "npm:~5.26.4"
-  checksum: 10c0/f374b763c744e8f16e4f38cf6e2c0eef31781ec9228c9e43a6f267880fea420fab0a238b59f10a7cb3444e49547c5e3785787e371fc242307310995b21988812
+  checksum: 10c0/2ac92bb631dbddfb560eb3ba4eedbb1c688044a0130bc1ef032f5c0f20148ac7c9aa3c5aaa5a9787b6c4c6299847d754b96ee8c9def951481ba6628c46b683f5
   languageName: node
   linkType: hard
 
@@ -331,8 +331,8 @@ __metadata:
   resolution: "generate-awesome-text@workspace:."
   dependencies:
     "@actions/core": "npm:^1.10.1"
-    "@google/generative-ai": "npm:^0.11.4"
-    "@types/node": "npm:^20.12.12"
+    "@google/generative-ai": "npm:^0.12.0"
+    "@types/node": "npm:^20.12.13"
     "@vercel/ncc": "npm:^0.38.1"
     typescript: "npm:^5.4.5"
   languageName: unknown

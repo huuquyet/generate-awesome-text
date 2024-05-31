@@ -28,10 +28,10 @@
   },
   "dependencies": {
     "@actions/core": "^1.10.1",
-    "@google/generative-ai": "^0.11.4"
+    "@google/generative-ai": "^0.12.0"
   },
   "devDependencies": {
-    "@types/node": "^20.12.12",
+    "@types/node": "^20.12.13",
     "@vercel/ncc": "^0.38.1",
     "typescript": "^5.4.5"
   },

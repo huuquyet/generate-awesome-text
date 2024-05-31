@@ -1830,7 +1830,7 @@ function isLoopbackAddress(host) {
 
 /***/ }),
 
-/***/ 5833:
+/***/ 9447:
 /***/ ((__unused_webpack_module, exports) => {
 
 "use strict";
@@ -2083,7 +2083,7 @@ const DEFAULT_API_VERSION = "v1beta";
  * We can't `require` package.json if this runs on web. We will use rollup to
  * swap in the version number here at build time.
  */
-const PACKAGE_VERSION = "0.11.4";
+const PACKAGE_VERSION = "0.12.0";
 const PACKAGE_LOG_HEADER = "genai-js";
 var Task;
 (function (Task) {
@@ -26222,7 +26222,7 @@ Object.defineProperty(exports, "__esModule", ({ value: true }));
 exports.run = void 0;
 const node_process_1 = __nccwpck_require__(7742);
 const core = __importStar(__nccwpck_require__(4016));
-const generative_ai_1 = __nccwpck_require__(5833);
+const generative_ai_1 = __nccwpck_require__(9447);
 const updateFiles_1 = __nccwpck_require__(7538);
 // You can get your API key at https://aistudio.google.com/app/apikey
 const API_KEY = node_process_1.env.GEMINI_API_TOKEN;
@@ -26241,14 +26241,16 @@ const model = genAI.getGenerativeModel({
 });
 /** Call gemini-pro model to generate text from prompt */
 async function run() {
+    core.info('Calling to Gemini model... 📁');
     // `prompt` defined in action metadata file
     const prompt = core.getInput('prompt');
     try {
         const result = await model.generateContent(prompt);
         const response = await result.response;
         const joke = response.text();
-        (0, updateFiles_1.updateFiles)(prompt, joke);
-        core.setOutput('prompt', joke);
+        await (0, updateFiles_1.updateFiles)(prompt, joke);
+        core.setOutput('result', joke);
+        core.info('Updated chat with Gemini model successfully ✅ 💖');
     }
     catch (error) {
         console.error(error);
@@ -26271,13 +26273,13 @@ Object.defineProperty(exports, "__esModule", ({ value: true }));
 exports.updateFiles = void 0;
 const promises_1 = __nccwpck_require__(3977);
 const node_path_1 = __nccwpck_require__(9411);
-// The patterns to set the dad joke
-const START_JOKE = '<!-- START_JOKE -->';
-const END_JOKE = '<!-- END_JOKE -->';
+// The patterns to set the chat
+const START_CHAT = '<!-- START_CHAT -->';
+const END_CHAT = '<!-- END_CHAT -->';
 /** Update Readme and svg files with funny joke */
 async function updateFiles(prompt, joke) {
-    update('./README.md', prompt, joke);
-    update('./assets/speech-bubbles.svg', prompt, joke);
+    await update('./README.md', prompt, joke);
+    await update('./assets/speech-bubbles.svg', prompt, joke);
 }
 exports.updateFiles = updateFiles;
 /** Update file with the funny joke */
@@ -26285,20 +26287,17 @@ async function update(fileName, prompt, joke) {
     try {
         const filePath = (0, node_path_1.resolve)(fileName);
         const contents = await (0, promises_1.readFile)(filePath, { encoding: 'utf8' });
-        const startIndex = contents.indexOf(START_JOKE);
-        const endIndex = contents.indexOf(END_JOKE);
+        const regex = new RegExp(`(${START_CHAT})[\\s\\S]*?(${END_CHAT})`, '');
         // Check if patterns exist to insert the joke
-        if (startIndex > 0 && endIndex > startIndex) {
-            const firstRemains = contents.substring(0, startIndex).concat(START_JOKE);
-            const lastRemains = contents.substring(endIndex);
-            const fromMe = String.raw `<p class="from-me">${prompt}</p>`;
-            const rawJoke = String.raw `${joke}`;
-            const result = `${firstRemains}\n${fromMe}\n${rawJoke}${lastRemains}`;
-            await (0, promises_1.writeFile)(filePath, result);
+        if (!regex.test(contents)) {
+            console.log(`Please add comment blocks in ${fileName} file and try again ⚠️`);
         }
-        else {
-            console.log(`${fileName} was not updated. Please insert the comment blocks to ${fileName}`);
-        }
+        const result = String.raw `
+        <p class="from-me">${prompt}</p>
+        ${joke}`;
+        // Replace string with regex
+        const newContents = contents.replace(regex, `$1${result}\n$2`);
+        await (0, promises_1.writeFile)(filePath, newContents);
     }
     catch (error) {
         throw new Error(error.message);

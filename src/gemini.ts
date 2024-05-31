@@ -5,7 +5,6 @@ import { updateFiles } from './updateFiles'
 
 // You can get your API key at https://aistudio.google.com/app/apikey
 const API_KEY = env.GEMINI_API_TOKEN as string
-
 const genAI = new GoogleGenerativeAI(API_KEY)
 
 const safetySettings = [
@@ -14,7 +13,6 @@ const safetySettings = [
     threshold: HarmBlockThreshold.BLOCK_MEDIUM_AND_ABOVE,
   },
 ]
-
 // For text-only input, use gemini-pro model
 const model = genAI.getGenerativeModel({
   model: 'gemini-1.5-pro-latest',
@@ -25,6 +23,7 @@ const model = genAI.getGenerativeModel({
 
 /** Call gemini-pro model to generate text from prompt */
 export async function run() {
+  core.info('Calling to Gemini model... 📁')
   // `prompt` defined in action metadata file
   const prompt = core.getInput('prompt')
 
@@ -32,8 +31,10 @@ export async function run() {
     const result = await model.generateContent(prompt)
     const response = await result.response
     const joke = response.text()
-    updateFiles(prompt, joke)
-    core.setOutput('prompt', joke)
+
+    await updateFiles(prompt, joke)
+    core.setOutput('result', joke)
+    core.info('Updated chat with Gemini model successfully ✅ 💖')
   } catch (error) {
     console.error(error)
     // Fail the workflow run if an error occurs
