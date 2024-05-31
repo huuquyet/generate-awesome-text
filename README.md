@@ -7,10 +7,11 @@
 *Ready for a joke generated with Gemini model?*
 
 <!-- START_CHAT -->
-<p class="from-me">Please tell me how to be funny and creative</p>
-<p class="from-them">So you wanna be a comedic genius, eh? A regular ol' George Carlin? Listen,  being funny is like writing good HTML, it takes practice! You gotta bomb a few times (on stage, not with your code) to find what really gets a laugh.</p>
+        <p class="from-me">Please tell me how to be funny and creative</p>
+        <p class="from-them">So you wanna be a comedic genius, eh? A regular laugh factory! Well, I hate to break it to ya, but you can't just *become* funny. It's like trying to explain why cats are obsessed with boxes - it's just their thing, ya know?</p> 
 
-<p class="from-them">Creativity's the same way!  Don't be afraid to experiment.  Try new things, even if they seem weird.  You never know what's gonna be the next big hit! (Just like using Comic Sans on a website... just kidding, NEVER do that).</p> 
+<p class="from-them">But!  Being *creative*, now that we can work with. Think of it like building a joke website – you gotta start with solid HTML, then sprinkle in some CSS for style, and maybe a dash of JavaScript for those interactive punchlines.  Read, observe, and always be on the lookout for the absurd in everyday life. </p> 
+
 <!-- END_CHAT -->
 
 <div align="center" width="100%">
