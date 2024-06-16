@@ -20,7 +20,7 @@
     "bundle": "yarn lint && yarn package",
     "clean": "git clean -xdf",
     "doctor": "yarn dlx @yarnpkg/doctor",
-    "lint": "yarn dlx @biomejs/biome check --apply .",
+    "lint": "yarn dlx @biomejs/biome check --write .",
     "package": "yarn ncc build src/index.ts -o dist --source-map --license licenses.txt",
     "package:watch": "yarn package -- --watch",
     "update": "yarn upgrade-interactive",
@@ -31,11 +31,11 @@
     "@google/generative-ai": "^0.12.0"
   },
   "devDependencies": {
-    "@types/node": "^20.12.13",
+    "@types/node": "^20.14.2",
     "@vercel/ncc": "^0.38.1",
     "typescript": "^5.4.5"
   },
-  "packageManager": "yarn@4.2.2",
+  "packageManager": "yarn@4.3.0",
   "keywords": [
     "github-actions",
     "typescript",

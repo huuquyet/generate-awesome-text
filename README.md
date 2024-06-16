@@ -14,8 +14,8 @@
 
 <!-- END_CHAT -->
 
-<div align="center" width="100%">
-  <img alt="Speech bubbles" src="./assets/speech-bubbles.svg" width="100%">
+<div align="center">
+  <img alt="Speech bubbles" src="./assets/speech-bubbles.svg">
 </div>
 
 **Want to chat with Gemini as a stand-up comedian?** Just click [this](https://github.com/huuquyet/generate-awesome-text/issues/new?assignees=&labels=generate&projects=&title=Please+tell+me+how+to+be+more+funny+and+creative&body=Feel+free+to+change+the+title+then+Press+Submit%21)
@@ -30,9 +30,9 @@ Then add to the [secrets for the repository](https://docs.github.com/en/actions/
 
 ## Outputs
 
-### `prompt`
+### `result`
 
-The generated prompt to use later
+The generated result to use later
 
 ## Example usage
 
