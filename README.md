@@ -8,9 +8,9 @@
 
 <!-- START_CHAT -->
 <p class="from-me">Please tell me how to be funny and creative</p>
-    <p class="from-them">So you wanna be a comedic genius, eh? A regular laugh factory! Well, I hate to break it to ya, but you can't just *become* funny. It's like trying to explain why cats are obsessed with boxes - it's just their thing, ya know?</p> 
+    <p class="from-them">Alright, so you wanna be a comedic genius, painting the town laugh-a-minute?  First rule of funny:  **Steal everything, I mean,  "draw inspiration"** from everywhere!  Eavesdrop on conversations, shamelessly steal your weird uncle's jokes,  find the funny in burnt toast.   Just remember to credit your sources, especially if your source is your weird uncle. </p> 
 
-<p class="from-them">But!  Being *creative*, now that we can work with. Think of it like building a joke website – you gotta start with solid HTML, then sprinkle in some CSS for style, and maybe a dash of JavaScript for those interactive punchlines.  Read, observe, and always be on the lookout for the absurd in everyday life. </p> 
+<p class="from-them">Now, creativity's like a shy cat:  You chase it, it hides.  You ignore it, bam! Jumps right onto your keyboard.  My point is,  **don't force it.**  Do stuff you enjoy, even if it's just alphabetizing your spice rack.  You'll be surprised where inspiration lurks (probably in the cumin). </p>
 
 <!-- END_CHAT -->
 
