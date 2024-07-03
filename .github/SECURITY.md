@@ -7,6 +7,7 @@ I just try to using security policy, I used to update the latest version of depe
 | Version | Supported          |
 | ------- | ------------------ |
 | latest  | :white_check_mark: |
+| 1.3.0   | :white_check_mark: |
 | 1.0.x   | :white_check_mark: |
 
 ## Reporting a Vulnerability
