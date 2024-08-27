@@ -1841,21 +1841,21 @@ function isLoopbackAddress(host) {
  * as defined by https://swagger.io/docs/specification/data-models/data-types/
  * @public
  */
-exports.FunctionDeclarationSchemaType = void 0;
-(function (FunctionDeclarationSchemaType) {
+exports.SchemaType = void 0;
+(function (SchemaType) {
     /** String type. */
-    FunctionDeclarationSchemaType["STRING"] = "STRING";
+    SchemaType["STRING"] = "STRING";
     /** Number type. */
-    FunctionDeclarationSchemaType["NUMBER"] = "NUMBER";
+    SchemaType["NUMBER"] = "NUMBER";
     /** Integer type. */
-    FunctionDeclarationSchemaType["INTEGER"] = "INTEGER";
+    SchemaType["INTEGER"] = "INTEGER";
     /** Boolean type. */
-    FunctionDeclarationSchemaType["BOOLEAN"] = "BOOLEAN";
+    SchemaType["BOOLEAN"] = "BOOLEAN";
     /** Array type. */
-    FunctionDeclarationSchemaType["ARRAY"] = "ARRAY";
+    SchemaType["ARRAY"] = "ARRAY";
     /** Object type. */
-    FunctionDeclarationSchemaType["OBJECT"] = "OBJECT";
-})(exports.FunctionDeclarationSchemaType || (exports.FunctionDeclarationSchemaType = {}));
+    SchemaType["OBJECT"] = "OBJECT";
+})(exports.SchemaType || (exports.SchemaType = {}));
 
 /**
  * @license
@@ -2119,7 +2119,7 @@ const DEFAULT_API_VERSION = "v1beta";
  * We can't `require` package.json if this runs on web. We will use rollup to
  * swap in the version number here at build time.
  */
-const PACKAGE_VERSION = "0.16.0";
+const PACKAGE_VERSION = "0.17.1";
 const PACKAGE_LOG_HEADER = "genai-js";
 var Task;
 (function (Task) {
@@ -2923,8 +2923,8 @@ class ChatSession {
      * {@link GenerateContentResult}.
      *
      * Fields set in the optional {@link SingleRequestOptions} parameter will
-     * take precedence over the {@link RequestOptions} values provided at the
-     * time of the {@link GoogleAIFileManager} initialization.
+     * take precedence over the {@link RequestOptions} values provided to
+     * {@link GoogleGenerativeAI.getGenerativeModel }.
      */
     async sendMessage(request, requestOptions = {}) {
         var _a, _b, _c, _d, _e, _f;
@@ -2971,8 +2971,8 @@ class ChatSession {
      * and a response promise.
      *
      * Fields set in the optional {@link SingleRequestOptions} parameter will
-     * take precedence over the {@link RequestOptions} values provided at the
-     * time of the {@link GoogleAIFileManager} initialization.
+     * take precedence over the {@link RequestOptions} values provided to
+     * {@link GoogleGenerativeAI.getGenerativeModel }.
      */
     async sendMessageStream(request, requestOptions = {}) {
         var _a, _b, _c, _d, _e, _f;
@@ -3122,8 +3122,8 @@ class GenerativeModel {
      * and returns an object containing a single {@link GenerateContentResponse}.
      *
      * Fields set in the optional {@link SingleRequestOptions} parameter will
-     * take precedence over the {@link RequestOptions} values provided at the
-     * time of the {@link GoogleAIFileManager} initialization.
+     * take precedence over the {@link RequestOptions} values provided to
+     * {@link GoogleGenerativeAI.getGenerativeModel }.
      */
     async generateContent(request, requestOptions = {}) {
         var _a;
@@ -3138,8 +3138,8 @@ class GenerativeModel {
      * aggregated response.
      *
      * Fields set in the optional {@link SingleRequestOptions} parameter will
-     * take precedence over the {@link RequestOptions} values provided at the
-     * time of the {@link GoogleAIFileManager} initialization.
+     * take precedence over the {@link RequestOptions} values provided to
+     * {@link GoogleGenerativeAI.getGenerativeModel }.
      */
     async generateContentStream(request, requestOptions = {}) {
         var _a;
@@ -3153,14 +3153,14 @@ class GenerativeModel {
      */
     startChat(startChatParams) {
         var _a;
-        return new ChatSession(this.apiKey, this.model, Object.assign({ generationConfig: this.generationConfig, safetySettings: this.safetySettings, tools: this.tools, toolConfig: this.toolConfig, systemInstruction: this.systemInstruction, cachedContent: (_a = this.cachedContent) === null || _a === void 0 ? void 0 : _a.name }, startChatParams), this.requestOptions);
+        return new ChatSession(this.apiKey, this.model, Object.assign({ generationConfig: this.generationConfig, safetySettings: this.safetySettings, tools: this.tools, toolConfig: this.toolConfig, systemInstruction: this.systemInstruction, cachedContent: (_a = this.cachedContent) === null || _a === void 0 ? void 0 : _a.name }, startChatParams), this._requestOptions);
     }
     /**
      * Counts the tokens in the provided request.
      *
      * Fields set in the optional {@link SingleRequestOptions} parameter will
-     * take precedence over the {@link RequestOptions} values provided at the
-     * time of the {@link GoogleAIFileManager} initialization.
+     * take precedence over the {@link RequestOptions} values provided to
+     * {@link GoogleGenerativeAI.getGenerativeModel }.
      */
     async countTokens(request, requestOptions = {}) {
         const formattedParams = formatCountTokensInput(request, {
@@ -3179,8 +3179,8 @@ class GenerativeModel {
      * Embeds the provided content.
      *
      * Fields set in the optional {@link SingleRequestOptions} parameter will
-     * take precedence over the {@link RequestOptions} values provided at the
-     * time of the {@link GoogleAIFileManager} initialization.
+     * take precedence over the {@link RequestOptions} values provided to
+     * {@link GoogleGenerativeAI.getGenerativeModel }.
      */
     async embedContent(request, requestOptions = {}) {
         const formattedParams = formatEmbedContentInput(request);
@@ -3191,8 +3191,8 @@ class GenerativeModel {
      * Embeds an array of {@link EmbedContentRequest}s.
      *
      * Fields set in the optional {@link SingleRequestOptions} parameter will
-     * take precedence over the {@link RequestOptions} values provided at the
-     * time of the {@link GoogleAIFileManager} initialization.
+     * take precedence over the {@link RequestOptions} values provided to
+     * {@link GoogleGenerativeAI.getGenerativeModel }.
      */
     async batchEmbedContents(batchEmbedContentRequest, requestOptions = {}) {
         const generativeModelRequestOptions = Object.assign(Object.assign({}, this._requestOptions), requestOptions);
@@ -26399,7 +26399,7 @@ const safetySettings = [
 ];
 // For text-only input, use gemini-pro model
 const model = genAI.getGenerativeModel({
-    model: 'gemini-1.5-pro-latest',
+    model: 'gemini-1.5-flash',
     systemInstruction: 'You are a front-end expert who always responds in the style of a friendly stand-up comedian. Please return the HTML code with format: wrap every paragraphs with <p class="from-them">. Keep your answers under 3 paragraphs long with a few sentences each.',
     safetySettings,
 });

@@ -19,10 +19,10 @@
   },
   "dependencies": {
     "@actions/core": "^1.10.1",
-    "@google/generative-ai": "^0.16.0"
+    "@google/generative-ai": "^0.17.1"
   },
   "devDependencies": {
-    "@types/bun": "^1.1.6",
+    "@types/bun": "^1.1.8",
     "@vercel/ncc": "^0.38.1",
     "typescript": "^5.5.4"
   },
