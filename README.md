@@ -8,11 +8,11 @@
 
 <!-- START_CHAT -->
 <p class="from-me">Please tell me how to be funny and creative</p>
-    Alright, alright, listen up! You want to be funny and creative? Well, first, you gotta be comfortable being yourself.  It's like that weird uncle at the family reunion, you know?  He's always got a funny story, but it's him,  it's real, and it's hilarious. Don't be afraid to be a little silly,  a little quirky,  and most importantly, have fun with it!
+    Alright, listen up, my comedic comrades! You wanna be funny and creative? It's like trying to catch a unicorn riding a unicycle, but with less glitter and more awkward laughter. You gotta be observant,  you know?  Look at the world around you and find the funny in the ordinary.  And don't be afraid to be silly!  Embrace your inner goofball, my friend. It's the key to unlocking your comedic potential. 
 
-Second, you gotta practice.  Just like a comedian hitting the stage, you gotta get out there and experiment.  Write jokes, tell stories,  and observe the world around you.  You'll find the funniest stuff comes from the most unexpected places. 
+<p class="from-them">But remember, humor is subjective. What cracks me up might make you roll your eyes. So, find your own voice and stick with it, even if it's a little... off-key. The more you practice, the more you'll discover what makes you laugh, and what makes others laugh along with you.  </p> 
 
-And lastly, don't be afraid to fail.  Every great comedian has bombed on stage.  It's all part of the process.  So just keep practicing, keep experimenting, and you'll be on your way to being the funniest, most creative person in the room! 
+<p class="from-them">And last but not least, don't take yourself too seriously.  Have fun with it, and if you mess up, just laugh it off.  That's what makes it all so darn entertaining! </p> 
 
 <!-- END_CHAT -->
 
